@@ -177,6 +177,18 @@
 
 #home.main {
   /* sec02 can */
+  /* スライド */
+  /* 横スクロール */
+  /* 共通 */
+  /* https://liginc.co.jp/548232 */
+  /* 横スクロールセクション */
+  /* sec04_works */
+  /* sec05_contact */
+  /* sns ボックス */
+  /* 
+  矢印
+  https://design-library.jp/lab/arrow-right
+  */
 }
 #home.main .sec01_about {
   text-align: center;
@@ -425,6 +437,387 @@
   text-align: center;
   overflow: hidden;
   margin-bottom: 50px;
+}
+#home.main .side-scroll {
+  width: 100%;
+  padding: 0;
+  background-color: #1b1717;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#home.main .side-scroll .side-scroll-container {
+  width: 90%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+#home.main .side-scroll .side-scroll-container .side-scroll-list-wrapper {
+  position: relative;
+  width: 100%;
+  height: 700px;
+}
+#home.main .side-scroll .side-scroll-container .side-scroll-list-wrapper .side-scroll-list {
+  position: absolute;
+  top: 60px;
+  left: 0;
+  display: flex;
+  gap: 0 60px;
+}
+#home.main .side-scroll .side-scroll-container .side-scroll-list-wrapper .side-scroll-list .side-scroll-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  height: 90vh;
+  background-color: #eeebdd;
+  color: #1b1717;
+  font-size: 32px;
+  font-weight: 700;
+}
+#home.main .side-scroll .side-scroll-container .side-scroll-list-wrapper .side-scroll-list .side-scroll-item + .side-scroll-item {
+  margin-left: 60px;
+}
+#home.main .can_wrapper {
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin: 10% auto;
+  width: 80vw;
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10%;
+  gap: 50px;
+}
+@media (width < 700px) {
+  #home.main .can_wrapper {
+    flex-direction: column;
+    gap: 10px;
+    padding: 0;
+  }
+}
+#home.main .can01 {
+  border-radius: 44% 56% 57% 43%/55% 59% 41% 45%;
+  background: #F5E1E1;
+}
+@media (width < 768px) {
+  #home.main .can01 {
+    border-radius: 20%;
+  }
+}
+#home.main .can02 {
+  border-radius: 39% 61% 52% 48%/54% 46% 54% 46%;
+  background: #FCFDD8;
+}
+@media (width < 768px) {
+  #home.main .can02 {
+    border-radius: 20%;
+  }
+}
+#home.main .can03 {
+  border-radius: 39% 61% 52% 48%/54% 46% 54% 46%;
+  background: #CCEAC7;
+}
+@media (width < 768px) {
+  #home.main .can03 {
+    border-radius: 20%;
+  }
+}
+#home.main .can04 {
+  border-radius: 39% 61% 52% 48%/54% 46% 54% 46%;
+  background: #E3DFF6;
+}
+@media (width < 768px) {
+  #home.main .can04 {
+    border-radius: 20%;
+  }
+}
+#home.main .can05 {
+  border-radius: 39% 61% 52% 48%/54% 46% 54% 46%;
+  background: #F8CFCF;
+}
+@media (width < 768px) {
+  #home.main .can05 {
+    border-radius: 20%;
+  }
+}
+#home.main .can_left {
+  width: 50%;
+  text-align: center;
+}
+#home.main .can_left h3 {
+  font-size: 64px;
+  font-family: var(--mont);
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+@media (width < 1100px) {
+  #home.main .can_left h3 {
+    font-size: 45px;
+  }
+}
+@media (width < 700px) {
+  #home.main .can_left h3 {
+    margin: 20px auto 10px;
+  }
+}
+#home.main .can_left p {
+  font-size: 36px;
+  font-family: var(--mont);
+  font-weight: bold;
+  margin-top: 0;
+}
+@media (width < 1100px) {
+  #home.main .can_left p {
+    font-size: 20px;
+  }
+}
+#home.main .can_right {
+  text-align: center;
+}
+#home.main .can_right p {
+  font-size: 24px;
+  line-height: 40px;
+  text-align: left;
+  width: 65%;
+  margin: 0 auto;
+}
+@media (width < 1100px) {
+  #home.main .can_right p {
+    font-size: 20px;
+    line-height: 150%;
+  }
+}
+@media (width < 700px) {
+  #home.main .can_right p {
+    font-size: 16px;
+    margin: 20px auto 40px;
+    width: 80%;
+  }
+}
+#home.main .sec04_works {
+  text-align: center;
+  overflow: hidden;
+}
+#home.main .section_subtitle_works {
+  margin-bottom: 100px;
+}
+#home.main .works_img_wrapper {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  z-index: 99999;
+  position: relative;
+}
+#home.main .works_img_wrapper:last-of-type {
+  margin-top: 50px;
+}
+#home.main .to_works_more_button {
+  margin-top: 100px;
+}
+@media (width < 768px) {
+  #home.main .to_works_more_button {
+    margin-top: 45px;
+    width: 80%;
+  }
+}
+#home.main .sec05_contact {
+  text-align: center;
+  overflow: hidden;
+}
+#home.main .parent {
+  position: relative;
+  display: inline-block;
+}
+#home.main .parent::before {
+  position: absolute;
+  left: -2em;
+  top: 0;
+  content: "";
+  width: 2px;
+  height: 100%;
+  background-color: #000;
+  border-radius: 3px;
+  transform: rotate(-30deg);
+}
+#home.main .parent::after {
+  position: absolute;
+  right: -2em;
+  top: 0;
+  content: "";
+  width: 2px;
+  height: 100%;
+  background-color: #000;
+  border-radius: 3px;
+  transform: rotate(30deg);
+}
+#home.main .to_contact_button {
+  margin-top: 20px;
+}
+@media (width < 768px) {
+  #home.main .to_contact_button {
+    width: 80%;
+  }
+}
+#home.main .sns_wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  z-index: 9990;
+  position: relative;
+}
+#home.main .figma_wrapper,
+#home.main .github_wrapper {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: #FCFDD8;
+  position: relative;
+  text-align: center;
+}
+@media (width < 768px) {
+  #home.main .figma_wrapper,
+  #home.main .github_wrapper {
+    width: 130px;
+    height: 130px;
+  }
+}
+@media (width < 768px) {
+  #home.main .figma_wrapper p:nth-child(1),
+  #home.main .github_wrapper p:nth-child(1) {
+    -webkit-clip-path: inset(50% 0);
+            clip-path: inset(50% 0);
+  }
+}
+#home.main .figma_icon {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%);
+  width: 30px;
+}
+@media (width < 768px) {
+  #home.main .figma_icon {
+    width: 20px;
+  }
+}
+#home.main .to_design {
+  position: absolute;
+  top: 39%;
+  left: 49%;
+  width: 112px;
+  transform: translate(-50%);
+}
+@media (width < 768px) {
+  #home.main .to_design {
+    font-size: 14px;
+    top: 31%;
+  }
+}
+#home.main .dli-arrow-right {
+  display: inline-block;
+  vertical-align: middle;
+  color: var(--font-color);
+  line-height: 1;
+  position: relative;
+  width: 3em;
+  height: 0.1em;
+  background: currentColor;
+  top: 60%;
+  left: 11%;
+  transform: translateX(-50%);
+}
+@media (width < 768px) {
+  #home.main .dli-arrow-right {
+    left: 20%;
+  }
+}
+#home.main .dli-arrow-right::before {
+  content: "";
+  width: 0.65em;
+  height: 0.65em;
+  border: 0.1em solid currentColor;
+  border-left: 0;
+  border-bottom: 0;
+  transform: rotate(45deg);
+  transform-origin: top right;
+  position: absolute;
+  top: 50%;
+  right: -0.05em;
+  box-sizing: border-box;
+}
+#home footer {
+  margin-top: 120px;
+  text-align: center;
+  height: 130px;
+  line-height: 130px;
+  position: relative;
+}
+#home footer .go_to_top {
+  border: 5px solid #F2A6C4;
+  width: 155px;
+  height: 155px;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 80px;
+  right: 30px;
+}
+@media screen and (max-width: 768px) {
+  #home footer .go_to_top {
+    width: 120px;
+    height: 120px;
+  }
+}
+#home footer .go_to_top p {
+  position: absolute;
+  top: -20%;
+  left: 50%;
+  transform: translate(-50%);
+  font-size: 14px;
+}
+@media screen and (max-width: 768px) {
+  #home footer .go_to_top p {
+    top: -40%;
+  }
+}
+#home footer .go_to_top .dli-arrow-up {
+  display: inline-block;
+  vertical-align: middle;
+  color: #2E1000;
+  line-height: 1;
+  position: relative;
+  width: 0.1em;
+  height: 3em;
+  background: currentColor;
+  top: 26%;
+}
+@media screen and (max-width: 768px) {
+  #home footer .go_to_top .dli-arrow-up {
+    top: 10%;
+  }
+}
+#home footer .go_to_top .dli-arrow-up::before {
+  content: "";
+  width: 0.65em;
+  height: 0.65em;
+  border: 0.1em solid currentColor;
+  border-left: 0;
+  border-bottom: 0;
+  transform: rotate(-45deg);
+  transform-origin: top right;
+  position: absolute;
+  top: -6%;
+  right: -0.02em;
+  box-sizing: border-box;
+}
+#home footer small {
+  font-size: 14px;
 }
 
 #about {
