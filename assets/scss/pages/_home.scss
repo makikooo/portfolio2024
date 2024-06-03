@@ -1,0 +1,11 @@
+@use "../globals/index" as *;
+
+
+#home {
+    background-color: $cPink1;
+    @include mq(md) {
+        background-color: #000;
+    }
+}
+
+

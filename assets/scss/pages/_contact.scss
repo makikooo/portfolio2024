@@ -1,0 +1,484 @@
+@use "../globals/index" as *;
+
+#Contact_page {  
+    background-color: #000; 
+    & #head_image {
+        background-image: url(../images/title09.webp);
+        @include mq(sm) {
+            background-image: url(../images/sp_title09.webp);
+        }
+    }
+
+    /* 共通スタイル */
+    & body {
+        font-family: "Noto Sans JP", sans-serif;
+        color: #4C4948;
+        font-size: 16px;
+    }
+
+    & .pink {
+        color: #E95F91;
+    }
+
+    & .sec02 {
+        text-align: center;
+    }
+    & .contact_title {
+        font-size: 1.25rem;
+        margin-top: 60px;
+        margin-bottom: 100px;
+        @media (width < 1000px) {
+            font-size: 1.125rem;
+        }
+        @media (width < 768px) {
+            font-size: 1rem;
+            text-align: left;
+            width: 90%;
+            margin: 25px auto;
+        }
+    }
+    & div.vwrap {
+        width: 800px;
+        margin: 63px auto 0;
+        display: flex;
+        justify-content: center; 
+        align-items: center; 
+        padding: 20px;
+        @media (width < 768px) {
+            margin-top: 0;
+        }
+    }
+    & .circle {
+        width: 20px; 
+        height: 20px; 
+        border-radius: 50%;
+        border: #E95F91 solid 3px;
+        background-color: #E95F91; 
+        display: flex; 
+        justify-content: center; 
+        align-items: center; 
+        position: relative;
+    }
+    & .circle2,
+    & .circle3 {
+        border: #848484 solid 3px;
+        background-color: #848484;
+    }
+    & .vline {
+        width: 220px; 
+        height: 0; 
+    }
+    & .vline1 {
+        border: #848484 solid 2px;
+    }
+    & .vline2 {
+        border: #848484 solid 2px;
+    }
+    & .text_box {
+        max-width: 750px;;
+        height: 18px;
+        margin: 0 auto 45px;
+        position: relative;
+    }
+    & .text1 {
+        font-size: 1.25rem;
+        position: absolute;
+        left: 23px;
+        color: #E95F91;
+    }
+    & .text2 {
+        font-size: 1.25rem;
+        position: absolute;
+        left: 319px;
+        color: #848484;
+    }
+    & .text3 {
+        font-size: 1.25rem;
+        position: absolute;
+        left: 552px;
+        color: #848484;
+    }
+    @media (width < 1000px) {
+        & .text_box {
+            margin-bottom: 100px;
+        }
+        & .text1 {
+            font-size: 1rem;
+            left: 23px;
+            color: #E95F91;
+        }
+        & .text2 {
+            font-size: 1rem;
+            left: 319px;
+            color: #848484;
+        }
+        & .text3 {
+            font-size: 1rem;
+            left: 552px;
+            color: #848484;
+        }
+    }
+    @media (width < 768px) {
+        & .wrapper {
+            display: flex;
+            position: absolute;
+            // top: 410px;
+            padding: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        & div.vwrap {
+            height: 130px;
+            flex-direction: column;
+            width: 85px;
+            position: relative;
+        }
+        & div.circle {
+            display: flex; 
+            justify-content: center; 
+            align-items: center;  
+            position: relative;
+        }
+        & .circle1 {
+            top: -19px;
+        }
+        & .circle2 {
+            top: 12px;
+        }
+        & .circle3 {
+            top: 42px;
+        }
+        & .vline {
+            width: 46px;
+            transform: rotate(-90deg);
+        }
+        & .vline1 {
+            border: #848484 solid 1px;
+            z-index: -1;
+            position: absolute;
+            top: 46px;
+        }
+        & .vline2{
+            border: #848484 solid 1px;
+            width: 46px;
+            position: absolute;
+            top: 100px;
+            z-index: -1;
+        }
+        & .text_box {
+            width: 176px;
+            height: 200px;
+            margin: 0 auto;
+            position: relative;
+            top: 0;
+            left: 0;
+        }
+        & .text1 {
+            font-size: 0.875rem;
+            top: 17px;
+            position: absolute;
+            left: 0;
+            color: #E95F91;
+        }
+        & .text2 {
+            font-size: 0.875rem;
+            left: 0;
+            top: 68px;
+            position: absolute;
+            color: #848484;
+        }
+        & .text3 {
+            font-size: 0.875rem;
+            position: absolute;
+            left: 0;
+            top: 121px;
+            color: #848484;
+        }
+    }
+    @media (width < 500px) {
+        & .wrapper {
+            top: 350px;
+        }
+    }
+    /* sec[03 */
+    & .sec03 {
+        margin-top: 100px;
+        @media (width < 768px) {
+            margin-top: 194px;
+        }
+    }
+    /* 
+    テーブル共通
+    */
+    & .contact_table {
+        max-width: 1100px;
+        width: 90%;
+        margin: 0 auto 40px;
+        font-size: 1.25rem;
+        @media(width < 1000px) {
+            font-size: 1rem;
+        }
+        @media(width < 768px) {
+            margin-bottom: 25px;
+        }
+    }
+
+    & .contact_th {
+        margin-bottom: 60px;
+        width: 77%;
+        font-weight: 500;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @media (width < 916px) {
+            display: block;
+            width: 100%;
+            justify-content: flex-start;
+            margin-bottom: 25px;
+        }
+        @media (width < 768px) {
+            margin-bottom: 8px;
+        }
+    }
+    & .contact_td {
+        width: 68%;
+        @media (width < 916px) {
+            display: block;
+            margin-bottom: 40px;
+            width: 100%;
+        }
+        @media (width < 768px) {
+            margin-bottom: 25px;
+        }
+    }
+    & .contact_table_title {
+        display: inline-block;
+    }
+    & .required {
+        display: inline-block;
+        border: 1px solid $cPink3;
+        @media (width < 916px) {
+            margin-left: 30px;
+        }
+    }
+    & .any {
+        display: inline-block;
+        border: solid 1px #89C1E3;
+        @media (width < 916px) {
+            margin-left: 30px;
+        }
+    }
+    & .required,
+    & .any {
+        width: 70px;
+        height: 25px;
+        line-height: 25px;
+        text-align: center;
+        font-size: 1rem;
+        font-weight: 400;
+        border-radius: 50px;
+    }
+    & input[type="text"],
+    & input[type="email"] {
+        width: 100%;
+        padding: 0.2em 0.8em;
+        border: 1px solid #848484;
+        border-radius: 5px;
+    }
+    & .input_text {
+        color: #848484;
+        font-weight: 300;
+    }
+    & textarea {
+        text-align: left;
+        width:100%;
+        height:100px;
+        padding: 0.2em 0.8em;
+        border: 1px solid #848484;
+        border-radius: 5px;
+        }
+      /* 
+    チェックボックスの形状
+    */
+    input[type="checkbox"] {
+        position: relative;
+        width: 16px;
+        height: 16px;
+        top: -3px;
+        border: 1px solid #000;
+        vertical-align: -5px;
+      }
+      
+      /* 
+      チェックボックスのチェックを入れたらレ点にする
+      */
+      input[type="checkbox"]:checked:before {
+        position: absolute;
+        top: 3px;
+        left: 5px;
+        transform: rotate(50deg);
+        width: 4px;
+        height: 8px;
+        border-right: 2px solid #000;
+        border-bottom: 2px solid #000;
+        content: '';
+      }
+    /* 
+    テーブル個別
+    */
+    & .experience,
+    & .work {
+        margin-right: 60px;
+        margin-left: 17px;
+    }
+    & .other {
+        margin-right: 17px;
+    }
+    @media (width < 916px) {
+        & .display_none {
+            display: none;
+        }
+    }
+    @media (width < 768px){
+        & .other {
+            margin-left: 17px;
+        }
+    }
+    /* テーブルここまで */
+    
+    
+    & .privacy_box {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 50px;
+        @media (width < 768px) {
+            margin-bottom: 30px;
+        }
+    }
+    & .privacy {
+        margin-left: 40px;
+        font-size: 1.25rem;
+        @media (width < 1000px) {
+            font-size: 1rem;
+        }
+        @media (width < 768px) {
+            margin-left: 25px;
+        }
+    }
+    & .privacy-link {
+        text-decoration: underline;
+    }
+    
+    & .attention_text {
+        max-width: 655px;
+        width: 80%;
+        margin: 0 auto;
+        text-align: left;
+        font-size: 1rem;
+        @media (width < 768px){
+            font-size: 0.9375rem;
+        }
+    }
+    
+    /* 　
+    ボタン
+    */
+    & .button_box {
+        display: flex;
+        justify-content: center;
+        gap: 70px;
+        @media (width < 768px) {
+            gap: 15px;
+        }
+    }
+    & .go_to_next {
+        /* display: flex;
+        justify-content: space-around;
+        align-items: center; */
+        width: 440px;
+        height: 55px;
+        line-height: 55px;
+        margin: 70px auto 140px;
+        border-radius: 25px;
+        position: relative;
+        overflow: hidden;
+        text-align: center;
+        /*アニメーションの指定*/   
+        transition: ease .2s;
+        @media (width < 1000px) {
+            margin-bottom: 50px;
+        }
+        @media (width < 768px) {
+            max-width: 90%;
+            width: 90%;
+            margin-bottom: 70px;
+        }
+    }
+    & .go_to_next {
+        background-image: linear-gradient(90deg, rgba(193, 123, 177, 1) 10%, rgba(233, 95, 145, 1) 30%, rgba(255, 97, 97, 1) 70%, rgba(252, 205, 25, 1) 90%);
+    }
+    
+    & .go_to_next:hover & .next {
+        color: #ffffff;
+        z-index: 100;
+    }
+    
+    /*== 背景が流れる（左から右） */
+    & .go_to_next:before {
+        content: '';
+            /*絶対配置で位置を指定*/
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2;
+            /*色や形状*/
+        background:#E95F91;/*背景色*/
+        width: 100%;
+        height: 100%;
+            /*アニメーション*/
+        transition: transform .5s cubic-bezier(0.8, 0, 0.2, 1) 0s;
+        transform: scale(0, 1);
+        transform-origin: right top;
+    }
+    
+    /*hoverした際の形状*/
+    & .bg_left:hover:before{
+        transform-origin:left top;
+        transform:scale(1, 1);
+    }
+    & .next {
+        color: #ffffff;
+        font-size: 1.1875rem;
+        font-weight: 600;
+        z-index: 1000;
+        @media (width < 1000px ) {
+            font-size: 1.125rem;
+        }
+        @media (width < 768px ) {
+            font-size: 1rem;
+        }
+    }
+    
+    & .button_arrow {
+        position: relative;
+        display: inline-block;
+        padding: 10px;
+        z-index: 10;
+    }      
+    & .button_arrow::before {
+        content: '';
+        width: 10px;
+        height: 10px;
+        border-top: solid 2px #fff;
+        border-right: solid 2px #fff;
+        position: absolute;
+        left: 10px;
+        top: 22px;
+        transform: rotate(45deg);
+    }
+    & .go_to_next:hover & .button_arrow::before {
+        border-top: solid 2px #ffffff;
+        border-right: solid 2px #ffffff;
+    }
+
+}
