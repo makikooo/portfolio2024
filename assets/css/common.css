@@ -298,6 +298,10 @@ body {
 }
 
 /* sns ボックス */
+.sec06_sns {
+  margin-top: 70px;
+}
+
 .sns_wrapper {
   display: flex;
   justify-content: center;

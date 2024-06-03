@@ -226,7 +226,7 @@ let option = {
 };
 let option2 = {
   target_element: '#circular-text2', // taget HTML element ('#id' '.class' etc)
-  diameter: 1100, // diameter of a circle (min 1 max 10)
+  diameter: 900, // diameter of a circle (min 1 max 10)
   position_top: 90, // circular position y (%)
   position_left: 50, // circular position x (%)
   font_size: 40, // font size (px)
@@ -243,7 +243,7 @@ let option2 = {
 let option3 = {
   target_element: '#circular-text3', // taget HTML element ('#id' '.class' etc)
   diameter: 900, // diameter of a circle (min 1 max 10)
-  position_top: 90, // circular position y (%)
+  position_top: 80, // circular position y (%)
   position_left: 50, // circular position x (%)
   font_size: 40, // font size (px)
   last_space: true, // Add a space after the last character. (true or false)
@@ -259,7 +259,7 @@ let option3 = {
 let option4 = {
   target_element: '#circular-text4', // taget HTML element ('#id' '.class' etc)
   diameter: 900, // diameter of a circle (min 1 max 10)
-  position_top: 90, // circular position y (%)
+  position_top: 80, // circular position y (%)
   position_left: 50, // circular position x (%)
   font_size: 40, // font size (px)
   last_space: true, // Add a space after the last character. (true or false)
@@ -403,20 +403,48 @@ RotateCircularTextAnimation(option11);
 // GSAPで一部横スクロール
 // https://qiita.com/nakkie08/items/68f8f7065e00ffe650cb
 
-const listWrapperEl = document.querySelector('.side-scroll-list-wrapper');
-const listEl = document.querySelector('.side-scroll-list');
+// const listWrapperEl = document.querySelector('.side-scroll-list-wrapper');
+// const listEl = document.querySelector('.side-scroll-list');
 
-gsap.to(listEl, {
-  x: () => -(listEl.clientWidth - listWrapperEl.clientWidth),
-  ease: 'none',
+// gsap.to(listEl, {
+//   x: () => -(listEl.clientWidth - listWrapperEl.clientWidth),
+//   ease: 'none',
+//   scrollTrigger: {
+//     trigger: '.side-scroll',
+//     start: 'top top', // 要素の上端（top）が、ビューポートの上端（top）にきた時
+//     end: () => `+=${listEl.clientWidth - listWrapperEl.clientWidth}`,
+//     scrub: true,
+//     pin: true,
+//     anticipatePin: 1,
+//     invalidateOnRefresh: true,
+//   },
+// });
+
+gsap.registerPlugin(ScrollTrigger);
+const wrapper = document.getElementById('wrapper');
+const container = document.getElementById('container');
+
+gsap.to(container, {
+  x: () => -(container.clientWidth - wrapper.clientWidth) + 'px',
+  ease: Power0.easeNone,
   scrollTrigger: {
-    trigger: '.side-scroll',
-    start: 'top top', // 要素の上端（top）が、ビューポートの上端（top）にきた時
-    end: () => `+=${listEl.clientWidth - listWrapperEl.clientWidth}`,
-    scrub: true,
+    trigger: wrapper,
+    start: 'top top',
+    end: () => {
+      if (container.clientWidth > wrapper.clientWidth) {
+        return '+=' + (container.clientWidth - wrapper.clientWidth);
+      } else {
+        return '+=' + 0;
+      }
+    },
     pin: true,
     anticipatePin: 1,
-    invalidateOnRefresh: true,
-  },
+    scrub: 0,
+    invalidateOnRefresh: true
+  }
+});
+
+window.addEventListener('resize', () => {
+  ScrollTrigger.refresh();
 });
 

@@ -351,188 +351,175 @@
         }
         /* sec02 can */
         .sec02_can {
-            margin-top: 80px;
+            margin-top: 60px;
             text-align: center;
-            overflow: hidden;
             margin-bottom: 50px;
+            overflow: hidden;
+            & .container {
+                clip-path: inset(0 0 50% 0);
+                width: 100%;
+                aspect-ratio: 2 / 1;
+                z-index: 10;
+                position: relative;
+                @include mq(lg) {
+                    clip-path: inset(50% 0);
+                }
+            }
         }
 
 
         /* スライド */
         /* 横スクロール */
         /* 共通 */
-        /* https://liginc.co.jp/548232 */
+        /* https://qiita.com/k_watanabe_51/items/0d21d6560c10163a130f */
         /* 横スクロールセクション */
-        .side-scroll {
-            width: 100%;
-            padding: 0;
-            background-color: #1b1717;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+        .side-scroll {  
+            .wrapper {
+                overflow: hidden;
+                position: relative;
+                height: 100vh;
+            }
             
-            & .side-scroll-container{
-                width: 90%;
-                max-width: 1400px;
-                margin: 0 auto;
-                & .side-scroll-list-wrapper {
-                    position: relative;
+            .container {
+                position: absolute;
+                top: 0;
+                left: 0;
+                display: flex;
+                align-items: center;
+                height: 100%;
+            }
+            
+            .section {
+                flex-shrink: 0;
+                display: flex;
+                align-items: center;
+                width: vh(1200);
+                height: 100%;
+                background-color: $bg-color;
+                @media screen and (min-height: 700px) {
+                    width: 1200px;
+                }
+            }
+            
+            .inner {
+                width: 100%;
+                height: 80%;
+                padding: vw(100) vh(100);
+                @media screen and (min-height: 700px) {
+                    padding: 100px;
+                }
+                .side-scroll_item01 {
+                    width: 80%;
+                    height: 100%;
+                    border-radius: 30% 70% 51% 49% / 43% 30% 70% 57%;
+                    background-color: #F5E1E1;
+                }
+                .side-scroll_item02 {
                     width: 100%;
-                    height: 700px;
-                    & .side-scroll-list {
-                        position: absolute;
-                        top: 60px;
-                        left: 0;
-                        display: flex;
-                        gap: 0 60px;
-                        & .side-scroll-item {
-                            display: flex;
-                            align-items: center;
-                            justify-content: center;
-                            width: 300px;
-                            height: 90vh;
-                            background-color: #eeebdd;
-                            color: #1b1717;
-                            font-size: 32px;
-                            font-weight: 700;
+                    height: 90%;
+                    border-radius: 51% 49% 51% 49% / 37% 67% 33% 63%;
+                    background-color: #FCFDD8;
+                }
+                .side-scroll_item03 {
+                    width: 90%;
+                    height: 100%;
+                    border-radius: 51% 49% 68% 32% / 48% 43% 57% 52%;
+                    background-color: #CCEAC7;
+                }
+                .side-scroll_item04 {
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 30% 70% 51% 49% / 43% 30% 70% 57%;
+                    background-color: #E3DFF6;
+                }
+                .side-scroll_item05 {
+                    width: 90%;
+                    height: 95%;
+                    border-radius: 27% 73% 49% 51% / 48% 30% 70% 52%;
+                    background-color: #F8CFCF;
+                }
+                .item_box {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    gap: 30px;
+                    padding: 10%;
+                    .item_left {
+                        width: 47%;
+                        text-align: center;
+                        h3 {
+                            font-size: 40px;
                         }
-                        .side-scroll-item + .side-scroll-item {
-                            margin-left: 60px;
+                        p {
+                            font-size: 32px;
                         }
                     }
-                }  
-            }    
-        }
-
-// ここから注意して作業すること
-        .can_wrapper {
-            object-fit: cover;
-            margin: 10% auto;
-            width: 80vw;
-            height: 80%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 10%;
-            gap: 50px;
-            @media (width < 700px){
-                flex-direction: column;
-                gap: 10px;
-                padding: 0;
+                    .item_right {
+                        width: 60%;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: baseline;
+                        gap: 20px;
+                        p {
+                            text-align: left;
+                            font-size: 16px;
+                        }
+                    }
+                }
             }
+        }
             
-         }
-         .can01{
-             border-radius: 44% 56% 57% 43% / 55% 59% 41% 45%;
-             background: #F5E1E1;
-             @media (width < 768px){
-                border-radius: 20%;
-            }
-         }
-         .can02 {
-            border-radius: 39% 61% 52% 48% / 54% 46% 54% 46%;
-            background: #FCFDD8;
-            @media (width < 768px){
-                border-radius: 20%;
-            }
-         }
-         .can03 {
-            border-radius: 39% 61% 52% 48% / 54% 46% 54% 46%;
-            background: #CCEAC7;
-            @media (width < 768px){
-                border-radius: 20%;
-            }
-         }
-         .can04 {
-            border-radius: 39% 61% 52% 48% / 54% 46% 54% 46%;
-            background: #E3DFF6;
-            @media (width < 768px){
-                border-radius: 20%;
-            }
-         }
-         .can05 {
-            border-radius: 39% 61% 52% 48% / 54% 46% 54% 46%;
-            background: #F8CFCF;
-            @media (width < 768px){
-                border-radius: 20%;
-            }
-         }
-        .can_left {
-            width: 50%;
-            text-align: center;
-        }
-        .can_left h3 {
-            font-size: 64px;
-            font-family: var(--mont);
-            font-weight: bold;
-            margin-bottom: 30px;
-            @media (width < 1100px){
-                font-size: 45px;
-            }
-            @media (width < 700px){
-                margin: 20px auto 10px;
-            }
-        }
-        .can_left p {
-            font-size: 36px;
-            font-family: var(--mont);
-            font-weight: bold;
-            margin-top: 0;
-            @media (width < 1100px){
-                font-size: 20px;
-            }
-        }
-        .can_right {
-            text-align: center;
-        }
-        .can_right p {
-            font-size: 24px;
-            line-height: 40px;
-            text-align: left;
-            width: 65%;
-            margin: 0 auto;
-            @media (width < 1100px){
-                font-size: 20px;
-                line-height: 150%;
-            }
-            @media (width < 700px){
-                font-size: 16px;
-                margin: 20px auto 40px;
-                width: 80%;
-            }
-        }
+            
+        // ここから注意して作業すること
         
         
         /* sec04_works */
         .sec04_works {
             text-align: center;
             overflow: hidden;
-        }
-        .section_subtitle_works {
-            margin-bottom: 100px;
-        }
-        .works_img_wrapper {
-            width: 90%;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            gap: 30px;
-            flex-wrap: wrap;
-            z-index: 99999;
             position: relative;
-        
-        }
-        .works_img_wrapper:last-of-type {
-            margin-top: 50px;
-        }
-        .to_works_more_button {
-            margin-top: 100px;
-            @media (width < 768px) {
-                margin-top: 45px;
-                width: 80%;
+            & .container {
+                overflow: hidden;
+                clip-path: inset(0 0 50% 0);
+                width: 100%;
+                aspect-ratio: 2 / 1;
+                z-index: 10;
+                position: relative;
+                @include mq(lg) {
+                    clip-path: inset(50% 0);
+                }
+            }
+            & .section_title_box {
+                position: absolute;
+                top: 250px;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            & .section_subtitle_box {
+                position: absolute;
+                top: 330px;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            & .sec04_flex_box {
+                z-index: 999999;
+                margin-top: -180px;
+                display: flex;
+                flex-wrap: wrap;
+                gap: 20px;
+                justify-content: space-around;
+                align-items: center;
+            }
+            .to_works_more_button {
+                margin-top: 100px;
+                @media (width < 768px) {
+                    margin-top: 45px;
+                    width: 80%;
+                }
             }
         }
+        
         
         /* sec05_contact */
         .sec05_contact {
@@ -540,30 +527,31 @@
             overflow: hidden;
         }
         .parent{
+            margin-top: 70px;
             position: relative;
             display: inline-block;
-        }
-        .parent::before {
-            position: absolute;
-            left: -2em;
-            top: 0;
-            content: '';
-            width: 2px;
-            height: 100%;
-            background-color: #000;
-            border-radius: 3px;
-            transform: rotate(-30deg);
-        }
-        .parent::after {
-            position: absolute;
-            right: -2em;
-            top: 0;
-            content: '';
-            width: 2px;
-            height: 100%;
-            background-color: #000;
-            border-radius: 3px;
-            transform: rotate(30deg);
+            &::before {
+                position: absolute;
+                left: -2em;
+                top: 0;
+                content: '';
+                width: 2px;
+                height: 100%;
+                background-color: #000;
+                border-radius: 3px;
+                transform: rotate(-30deg);
+            }
+           &::after {
+                position: absolute;
+                right: -2em;
+                top: 0;
+                content: '';
+                width: 2px;
+                height: 100%;
+                background-color: #000;
+                border-radius: 3px;
+                transform: rotate(30deg);
+            }
         }
         .to_contact_button {
             margin-top: 20px;

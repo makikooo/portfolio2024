@@ -180,7 +180,7 @@
   /* スライド */
   /* 横スクロール */
   /* 共通 */
-  /* https://liginc.co.jp/548232 */
+  /* https://qiita.com/k_watanabe_51/items/0d21d6560c10163a130f */
   /* 横スクロールセクション */
   /* sec04_works */
   /* sec05_contact */
@@ -428,194 +428,166 @@
   }
 }
 #home.main .sec02_can {
-  margin-top: 80px;
+  margin-top: 60px;
   text-align: center;
-  overflow: hidden;
   margin-bottom: 50px;
+  overflow: hidden;
 }
-#home.main .side-scroll {
+#home.main .sec02_can .container {
+  -webkit-clip-path: inset(0 0 50% 0);
+          clip-path: inset(0 0 50% 0);
   width: 100%;
-  padding: 0;
-  background-color: #1b1717;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-#home.main .side-scroll .side-scroll-container {
-  width: 90%;
-  max-width: 1400px;
-  margin: 0 auto;
-}
-#home.main .side-scroll .side-scroll-container .side-scroll-list-wrapper {
+  aspect-ratio: 2/1;
+  z-index: 10;
   position: relative;
-  width: 100%;
-  height: 700px;
 }
-#home.main .side-scroll .side-scroll-container .side-scroll-list-wrapper .side-scroll-list {
+@media screen and (max-width: 1000px) {
+  #home.main .sec02_can .container {
+    -webkit-clip-path: inset(50% 0);
+            clip-path: inset(50% 0);
+  }
+}
+#home.main .side-scroll .wrapper {
+  overflow: hidden;
+  position: relative;
+  height: 100vh;
+}
+#home.main .side-scroll .container {
   position: absolute;
-  top: 60px;
+  top: 0;
   left: 0;
   display: flex;
-  gap: 0 60px;
+  align-items: center;
+  height: 100%;
 }
-#home.main .side-scroll .side-scroll-container .side-scroll-list-wrapper .side-scroll-list .side-scroll-item {
+#home.main .side-scroll .section {
+  flex-shrink: 0;
   display: flex;
   align-items: center;
-  justify-content: center;
-  width: 300px;
-  height: 90vh;
-  background-color: #eeebdd;
-  color: #1b1717;
-  font-size: 32px;
-  font-weight: 700;
+  width: vh(1200);
+  height: 100%;
+  background-color: #F0FFF8;
 }
-#home.main .side-scroll .side-scroll-container .side-scroll-list-wrapper .side-scroll-list .side-scroll-item + .side-scroll-item {
-  margin-left: 60px;
+@media screen and (min-height: 700px) {
+  #home.main .side-scroll .section {
+    width: 1200px;
+  }
 }
-#home.main .can_wrapper {
-  -o-object-fit: cover;
-     object-fit: cover;
-  margin: 10% auto;
-  width: 80vw;
+#home.main .side-scroll .inner {
+  width: 100%;
   height: 80%;
+  padding: vw(100) vh(100);
+}
+@media screen and (min-height: 700px) {
+  #home.main .side-scroll .inner {
+    padding: 100px;
+  }
+}
+#home.main .side-scroll .inner .side-scroll_item01 {
+  width: 80%;
+  height: 100%;
+  border-radius: 30% 70% 51% 49%/43% 30% 70% 57%;
+  background-color: #F5E1E1;
+}
+#home.main .side-scroll .inner .side-scroll_item02 {
+  width: 100%;
+  height: 90%;
+  border-radius: 51% 49% 51% 49%/37% 67% 33% 63%;
+  background-color: #FCFDD8;
+}
+#home.main .side-scroll .inner .side-scroll_item03 {
+  width: 90%;
+  height: 100%;
+  border-radius: 51% 49% 68% 32%/48% 43% 57% 52%;
+  background-color: #CCEAC7;
+}
+#home.main .side-scroll .inner .side-scroll_item04 {
+  width: 100%;
+  height: 100%;
+  border-radius: 30% 70% 51% 49%/43% 30% 70% 57%;
+  background-color: #E3DFF6;
+}
+#home.main .side-scroll .inner .side-scroll_item05 {
+  width: 90%;
+  height: 95%;
+  border-radius: 27% 73% 49% 51%/48% 30% 70% 52%;
+  background-color: #F8CFCF;
+}
+#home.main .side-scroll .inner .item_box {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  gap: 30px;
   padding: 10%;
-  gap: 50px;
 }
-@media (width < 700px) {
-  #home.main .can_wrapper {
-    flex-direction: column;
-    gap: 10px;
-    padding: 0;
-  }
-}
-#home.main .can01 {
-  border-radius: 44% 56% 57% 43%/55% 59% 41% 45%;
-  background: #F5E1E1;
-}
-@media (width < 768px) {
-  #home.main .can01 {
-    border-radius: 20%;
-  }
-}
-#home.main .can02 {
-  border-radius: 39% 61% 52% 48%/54% 46% 54% 46%;
-  background: #FCFDD8;
-}
-@media (width < 768px) {
-  #home.main .can02 {
-    border-radius: 20%;
-  }
-}
-#home.main .can03 {
-  border-radius: 39% 61% 52% 48%/54% 46% 54% 46%;
-  background: #CCEAC7;
-}
-@media (width < 768px) {
-  #home.main .can03 {
-    border-radius: 20%;
-  }
-}
-#home.main .can04 {
-  border-radius: 39% 61% 52% 48%/54% 46% 54% 46%;
-  background: #E3DFF6;
-}
-@media (width < 768px) {
-  #home.main .can04 {
-    border-radius: 20%;
-  }
-}
-#home.main .can05 {
-  border-radius: 39% 61% 52% 48%/54% 46% 54% 46%;
-  background: #F8CFCF;
-}
-@media (width < 768px) {
-  #home.main .can05 {
-    border-radius: 20%;
-  }
-}
-#home.main .can_left {
-  width: 50%;
+#home.main .side-scroll .inner .item_box .item_left {
+  width: 47%;
   text-align: center;
 }
-#home.main .can_left h3 {
-  font-size: 64px;
-  font-family: var(--mont);
-  font-weight: bold;
-  margin-bottom: 30px;
+#home.main .side-scroll .inner .item_box .item_left h3 {
+  font-size: 40px;
 }
-@media (width < 1100px) {
-  #home.main .can_left h3 {
-    font-size: 45px;
-  }
+#home.main .side-scroll .inner .item_box .item_left p {
+  font-size: 32px;
 }
-@media (width < 700px) {
-  #home.main .can_left h3 {
-    margin: 20px auto 10px;
-  }
+#home.main .side-scroll .inner .item_box .item_right {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: baseline;
+  gap: 20px;
 }
-#home.main .can_left p {
-  font-size: 36px;
-  font-family: var(--mont);
-  font-weight: bold;
-  margin-top: 0;
-}
-@media (width < 1100px) {
-  #home.main .can_left p {
-    font-size: 20px;
-  }
-}
-#home.main .can_right {
-  text-align: center;
-}
-#home.main .can_right p {
-  font-size: 24px;
-  line-height: 40px;
+#home.main .side-scroll .inner .item_box .item_right p {
   text-align: left;
-  width: 65%;
-  margin: 0 auto;
-}
-@media (width < 1100px) {
-  #home.main .can_right p {
-    font-size: 20px;
-    line-height: 150%;
-  }
-}
-@media (width < 700px) {
-  #home.main .can_right p {
-    font-size: 16px;
-    margin: 20px auto 40px;
-    width: 80%;
-  }
+  font-size: 16px;
 }
 #home.main .sec04_works {
   text-align: center;
   overflow: hidden;
-}
-#home.main .section_subtitle_works {
-  margin-bottom: 100px;
-}
-#home.main .works_img_wrapper {
-  width: 90%;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  gap: 30px;
-  flex-wrap: wrap;
-  z-index: 99999;
   position: relative;
 }
-#home.main .works_img_wrapper:last-of-type {
-  margin-top: 50px;
+#home.main .sec04_works .container {
+  overflow: hidden;
+  -webkit-clip-path: inset(0 0 50% 0);
+          clip-path: inset(0 0 50% 0);
+  width: 100%;
+  aspect-ratio: 2/1;
+  z-index: 10;
+  position: relative;
 }
-#home.main .to_works_more_button {
+@media screen and (max-width: 1000px) {
+  #home.main .sec04_works .container {
+    -webkit-clip-path: inset(50% 0);
+            clip-path: inset(50% 0);
+  }
+}
+#home.main .sec04_works .section_title_box {
+  position: absolute;
+  top: 250px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+#home.main .sec04_works .section_subtitle_box {
+  position: absolute;
+  top: 330px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+#home.main .sec04_works .sec04_flex_box {
+  z-index: 999999;
+  margin-top: -180px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-around;
+  align-items: center;
+}
+#home.main .sec04_works .to_works_more_button {
   margin-top: 100px;
 }
 @media (width < 768px) {
-  #home.main .to_works_more_button {
+  #home.main .sec04_works .to_works_more_button {
     margin-top: 45px;
     width: 80%;
   }
@@ -625,6 +597,7 @@
   overflow: hidden;
 }
 #home.main .parent {
+  margin-top: 70px;
   position: relative;
   display: inline-block;
 }
@@ -1167,14 +1140,14 @@
     margin: 0 auto;
     font-size: 18px;
   }
-  #contact .sec03_contact .contact_table .contact_table tbody .contact_tr .contact_td input[type=checkbox] {
+  #contact .sec03_contact .contact_table .contact_table tbody .contact_tr .contact_td .checkbox_box input[type=checkbox] {
     width: 40px;
   }
 }
-#contact .sec03_contact .contact_table .button {
+#contact .sec03_contact .button {
   border: none;
 }
-#contact .sec03_contact .contact_table .send_text {
+#contact .sec03_contact .send_text {
   width: 80%;
   margin: 20px auto 95px;
 }

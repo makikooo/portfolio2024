@@ -80,22 +80,22 @@
                                     width: 300px;
                                     margin: 0 auto;
                                     font-size: 18px;
-                                }
-                                input[type="checkbox"] {
-                                    width: 40px;
+                                    input[type="checkbox"] {
+                                        width: 40px;
+                                    }
                                 }
                             }
                         }
                     }
                 }
             }
-            .button {
-                border: none;
-            }
-            .send_text {
-                width: 80%;
-                margin: 20px auto 95px;
-            } 
         }
+        .button {
+            border: none;
+        }
+        .send_text {
+            width: 80%;
+            margin: 20px auto 95px;
+        } 
     }
 } 
