@@ -1,3 +1,101 @@
 @use "../globals/index" as *;
 
 
+#contact{
+
+    .section_title_box {
+        margin-top: -300px;
+        @media (width < 1000px){
+            margin-top: -480px;
+        }
+    }
+    .sec02_cannot {
+        width: 90%;
+        margin: 50px auto;
+        .cannot_box {
+            width: 40%;
+            margin: 0 auto;
+            background: var(--pink);
+            text-align: center;
+            padding: 25px 100px;
+            border-radius: 65px;
+            @media (width < 1000px){
+                width: 60%;
+            }
+            @media (width < 768px){
+                padding: 15px 50px;
+            }
+            @media (width < 500px){
+                width: 90%;
+            }
+        }
+        .contact_text {
+            width: 360px;
+            margin: 60px auto 100px;
+        }
+    }
+    .sec03_contact {
+        .contact_table {
+            width: 60%;
+            margin: 0 auto;
+            text-align: left;
+            border-spacing: 65px;
+            border-collapse: separate;
+            font-size: 18px;
+            @media (width < 1000px) {
+                .contact_table{
+                    width: 90%;
+                    & tbody {
+                        
+                        .contact_tr {
+                            @media (width < 500px){
+                                width: 100%;
+                            }
+                            .contact_th {
+                                width: 15%;
+                                font-weight: normal;
+                                @media (width < 768px) {
+                                    display: block;
+                                    width: 100%;
+                                }
+                            }
+                            .contact_td {
+                                width: 80%;
+                                height: 70px;
+                                @media (width < 768px) {
+                                    display: block;
+                                    width: 100%;
+                                }
+                                input,
+                                textarea {
+                                    width: 100%;
+                                    height: 100%;
+                                    background: var(--bg-color);
+                                    border: 3px solid var(--pink);
+                                    border-left: none;
+                                    border-top: none;
+                                    font-size: 18px;
+                                }
+                                .checkbox_box {
+                                    width: 300px;
+                                    margin: 0 auto;
+                                    font-size: 18px;
+                                }
+                                input[type="checkbox"] {
+                                    width: 40px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .button {
+                border: none;
+            }
+            .send_text {
+                width: 80%;
+                margin: 20px auto 95px;
+            } 
+        }
+    }
+} 
