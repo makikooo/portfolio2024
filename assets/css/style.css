@@ -635,26 +635,43 @@
 #about {
   /* スキルテーブル */
 }
-#about .section_title_box {
+#about .sec01_about {
+  text-align: center;
+}
+#about .sec01_about .container {
+  -webkit-clip-path: inset(0 0 50% 0);
+          clip-path: inset(0 0 50% 0);
+  width: 100%;
+  aspect-ratio: 2/1;
+  z-index: 10;
+  position: relative;
+}
+@media screen and (max-width: 1000px) {
+  #about .sec01_about .container {
+    -webkit-clip-path: inset(50% 0);
+            clip-path: inset(50% 0);
+  }
+}
+#about .sec01_about .container .section_title_box {
   margin-top: -375px;
 }
 @media (width < 840px) {
-  #about .section_title_box {
+  #about .sec01_about .container .section_title_box {
     margin-top: -300px;
   }
 }
 @media (width < 620px) {
-  #about .section_title_box {
+  #about .sec01_about .container .section_title_box {
     margin-top: -250px;
   }
 }
 @media (width < 530px) {
-  #about .section_title_box {
+  #about .sec01_about .container .section_title_box {
     margin-top: -200px;
   }
 }
 @media (width < 430px) {
-  #about .section_title_box {
+  #about .sec01_about .container .section_title_box {
     margin-top: -150px;
   }
 }
@@ -750,11 +767,11 @@
 #about .sec02_about_me .career {
   position: absolute;
   top: 300px;
-  left: 20%;
+  left: 13%;
   z-index: 2;
   width: 630px;
   background-color: rgba(252, 253, 216, 0.5019607843);
-  padding: 28px 10% 40px 5%;
+  padding: 28px 10% 9% 5%;
   border-radius: 38% 62% 27% 41%/30% 25% 63% 64%;
 }
 @media (width < 1197px) {
@@ -904,7 +921,7 @@
   background-color: #CBFFE7;
   border-radius: 16% 24% 10% 10%;
 }
-@media (width < 1000px) {
+@media screen and (max-width: 1000px) {
   #about .sec03_skill .skill_box {
     width: 90%;
     margin: 0 auto 40px;
@@ -913,7 +930,7 @@
 }
 #about .sec03_skill .skill_box .skill_title {
   font-size: 24px;
-  font-family: var(--mont);
+  font-family: "Montserrat", sans-serif;
 }
 #about .sec03_skill .skill_box .skill_table {
   font-size: 18px;
@@ -926,46 +943,46 @@
     width: 100%;
   }
 }
-#about .sec03_skill .skill_box .skill_table .skill_table tr {
+#about .sec03_skill .skill_box .skill_table tbody .skill_table tr {
   height: 70px;
 }
-#about .sec03_skill .skill_box .skill_table .skill_table tr .skill_name {
+#about .sec03_skill .skill_box .skill_table tbody .skill_table tr .skill_name {
   width: 17%;
   height: 65px;
 }
 @media (width < 768px) {
-  #about .sec03_skill .skill_box .skill_table .skill_table tr .skill_name {
+  #about .sec03_skill .skill_box .skill_table tbody .skill_table tr .skill_name {
     display: block;
     width: 100%;
   }
 }
-#about .sec03_skill .skill_box .skill_table .skill_table tr .skill_graph {
+#about .sec03_skill .skill_box .skill_table tbody .skill_table tr .skill_graph {
   width: 76%;
   height: 65px;
 }
 @media (width < 768px) {
-  #about .sec03_skill .skill_box .skill_table .skill_table tr .skill_graph {
+  #about .sec03_skill .skill_box .skill_table tbody .skill_table tr .skill_graph {
     display: block;
     width: 100%;
   }
 }
-#about .sec03_skill .skill_box .skill_table .skill_table tr .skill_graph .white {
+#about .sec03_skill .skill_box .skill_table tbody .skill_table tr .skill_graph .white {
   background-color: #fff;
   height: 36px;
   width: 100%;
   border-radius: 50px;
 }
-#about .sec03_skill .skill_box .skill_table .skill_table tr .skill_graph .white .pink {
+#about .sec03_skill .skill_box .skill_table tbody .skill_table tr .skill_graph .white .pink {
   height: 36px;
   border-radius: 50px;
-  background-color: var(--pink);
+  background-color: #F2A6C4;
 }
-#about .sec03_skill .skill_box .skill_table .skill_table tr .skill_graph .white .per80 {
+#about .sec03_skill .skill_box .skill_table tbody .skill_table tr .skill_graph .white .per80 {
   animation: per80 linear;
   animation-timeline: scroll();
 }
 @media (width < 768px) {
-  #about .sec03_skill .skill_box .skill_table .skill_table tr .skill_graph .white .per80 {
+  #about .sec03_skill .skill_box .skill_table tbody .skill_table tr .skill_graph .white .per80 {
     animation: none;
     width: 80%;
   }
@@ -984,12 +1001,12 @@
     width: 80%;
   }
 }
-#about .sec03_skill .skill_box .skill_table .skill_table tr .skill_graph .white .per40 {
+#about .sec03_skill .skill_box .skill_table tbody .skill_table tr .skill_graph .white .per40 {
   animation: per40 linear;
   animation-timeline: scroll();
 }
 @media (width < 768px) {
-  #about .sec03_skill .skill_box .skill_table .skill_table tr .skill_graph .white .per40 {
+  #about .sec03_skill .skill_box .skill_table tbody .skill_table tr .skill_graph .white .per40 {
     animation: none;
     width: 40%;
   }
@@ -1008,12 +1025,12 @@
     width: 40%;
   }
 }
-#about .sec03_skill .skill_box .skill_table .skill_table tr .skill_graph .white .per20 {
+#about .sec03_skill .skill_box .skill_table tbody .skill_table tr .skill_graph .white .per20 {
   animation: per20 linear;
   animation-timeline: scroll();
 }
 @media (width < 768px) {
-  #about .sec03_skill .skill_box .skill_table .skill_table tr .skill_graph .white .per20 {
+  #about .sec03_skill .skill_box .skill_table tbody .skill_table tr .skill_graph .white .per20 {
     animation: none;
     width: 20%;
   }
@@ -1032,12 +1049,12 @@
     width: 20%;
   }
 }
-#about .sec03_skill .skill_box .skill_table .skill_table tr .skill_per {
+#about .sec03_skill .skill_box .skill_table tbody .skill_table tr .skill_per {
   width: 15%;
   height: 65px;
 }
 @media (width < 768px) {
-  #about .sec03_skill .skill_box .skill_table .skill_table tr .skill_per {
+  #about .sec03_skill .skill_box .skill_table tbody .skill_table tr .skill_per {
     display: block;
     width: 100%;
   }

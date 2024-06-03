@@ -1,19 +1,32 @@
 @use "../globals/index" as *;
 
 #about {
-    .section_title_box {
-        margin-top: -375px;
-        @media (width < 840px){
-            margin-top: -300px;
-        }
-        @media (width < 620px){
-            margin-top: -250px;
-        }
-        @media (width < 530px){
-            margin-top: -200px;
-        }
-        @media (width < 430px){
-            margin-top: -150px;
+    .sec01_about {
+        text-align: center;
+        & .container {
+            clip-path: inset(0 0 50% 0);
+            width: 100%;
+            aspect-ratio: 2 / 1;
+            z-index: 10;
+            position: relative;
+            @include mq(lg) {
+                clip-path: inset(50% 0);
+            }
+            .section_title_box {
+                margin-top: -375px;
+                @media (width < 840px){
+                    margin-top: -300px;
+                }
+                @media (width < 620px){
+                    margin-top: -250px;
+                }
+                @media (width < 530px){
+                    margin-top: -200px;
+                }
+                @media (width < 430px){
+                    margin-top: -150px;
+                }
+            }
         }
     }
     .sec02_about_me {
@@ -87,11 +100,11 @@
         .career {
             position: absolute;
             top: 300px;
-            left: 20%;
+            left: 13%;
             z-index: 2;
             width: 630px;
             background-color: #FCFDD880;
-            padding: 28px 10%  40px 5%;
+            padding: 28px 10%  9% 5%;
             border-radius: 38% 62% 27% 41% / 30% 25% 63% 64%;
             @media (width < 1197px){
                 left: 10%;
@@ -211,14 +224,14 @@
             padding: 4%;
             background-color: #CBFFE7;
             border-radius: 16% 24% 10% 10%;
-            @media (width < 1000px){
+            @include mq(lg){
                 width: 90%;
                 margin: 0 auto 40px;
                 border-radius: 20px;
             }
             .skill_title {
                 font-size: 24px;
-                font-family: var(--mont);
+                font-family: $mont;
             }
             .skill_table {
                 font-size: 18px;
@@ -228,84 +241,86 @@
                 @media (width < 1000px){
                     width: 100%;
                 }
-                .skill_table tr {
-                    height: 70px;
-                    .skill_name {
-                        width: 17%;
-                        height: 65px;
-                        @media (width < 768px){
-                            display: block;
-                            width: 100%;   
+                tbody{
+                    .skill_table tr {
+                        height: 70px;
+                        .skill_name {
+                            width: 17%;
+                            height: 65px;
+                            @media (width < 768px){
+                                display: block;
+                                width: 100%;   
+                            }
                         }
-                    }
-                    .skill_graph {
-                        width: 76%;
-                        height: 65px;
-                        @media (width < 768px){
-                            display: block;
-                            width: 100%;  
-                        }
-                        .white {
-                            background-color: #fff;
-                            height: 36px;
-                            width: 100%;
-                            border-radius: 50px;
-                            .pink {
+                        .skill_graph {
+                            width: 76%;
+                            height: 65px;
+                            @media (width < 768px){
+                                display: block;
+                                width: 100%;  
+                            }
+                            .white {
+                                background-color: #fff;
                                 height: 36px;
+                                width: 100%;
                                 border-radius: 50px;
-                                background-color: var(--pink);
-                            }
-                            .per80 {
-                                animation: per80 linear;
-                                animation-timeline: scroll();
-                                @media (width < 768px){
-                                    animation: none;
-                                    width: 80%;
+                                .pink {
+                                    height: 36px;
+                                    border-radius: 50px;
+                                    background-color: $c-pink;
                                 }
-                            }
-                            @keyframes per80 {
-                                0%  {width: 0;}
-                                40% {width: 10%;}
-                                60% {width: 80%;}
-                                100%{width: 80%;}
-                            }
+                                .per80 {
+                                    animation: per80 linear;
+                                    animation-timeline: scroll();
+                                    @media (width < 768px){
+                                        animation: none;
+                                        width: 80%;
+                                    }
+                                }
+                                @keyframes per80 {
+                                    0%  {width: 0;}
+                                    40% {width: 10%;}
+                                    60% {width: 80%;}
+                                    100%{width: 80%;}
+                                }
                                 
-                            .per40 {
-                                animation: per40 linear;
-                                animation-timeline: scroll();  
-                                @media (width < 768px){
-                                    animation: none;
-                                    width: 40%;
+                                .per40 {
+                                    animation: per40 linear;
+                                    animation-timeline: scroll();  
+                                    @media (width < 768px){
+                                        animation: none;
+                                        width: 40%;
+                                    }
                                 }
-                            }
-                            @keyframes per40 {
-                                0%  {width: 0;}
-                                40% {width: 10%;}
-                                60% {width: 40%;}
-                                100%{width: 40%;}
-                            }
-                            .per20 {
-                                animation: per20 linear;
-                                animation-timeline: scroll();  
-                                @media (width < 768px){
-                                    animation: none;
-                                    width: 20%;
+                                @keyframes per40 {
+                                    0%  {width: 0;}
+                                    40% {width: 10%;}
+                                    60% {width: 40%;}
+                                    100%{width: 40%;}
                                 }
-                            }
-                            @keyframes per20{
-                                0%  {width: 0;}
-                                40% {width: 5%;}
-                                60% {width: 20%;}
-                                100%{width: 20%;}
+                                .per20 {
+                                    animation: per20 linear;
+                                    animation-timeline: scroll();  
+                                    @media (width < 768px){
+                                        animation: none;
+                                        width: 20%;
+                                    }
+                                }
+                                @keyframes per20{
+                                    0%  {width: 0;}
+                                    40% {width: 5%;}
+                                    60% {width: 20%;}
+                                    100%{width: 20%;}
+                                }
                             }
                         }
-                    }
-                    .skill_per {
-                        width: 15%;
-                        height: 65px;
-                        @media (width < 768px){
-                            display: block;
-                            width: 100%;   
+                        .skill_per {
+                            width: 15%;
+                            height: 65px;
+                            @media (width < 768px){
+                                display: block;
+                                width: 100%;   
+                            }
                         }
                     }
                 }
