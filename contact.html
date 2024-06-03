@@ -5,27 +5,138 @@
     <meta name="description" content="">
     <meta name=”keywords” content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
-    <link rel="stylesheet" href="assets/css/reset.css">
-    <link rel="stylesheet" href="assets/css/common.css">
+    <title>作品集 - カラっとサワやか</title>
+    <link rel="icon" href="/assets/images/favicons/favicon.ico">
+    <link rel="stylesheet" href="assets/css/sanitize.css">
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Yomogi&family=Zen+Kaku+Gothic+New&family=Zen+Maru+Gothic&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
+    <header class="header">
+        <div class="logo_box">
+            <img class="logo" src="assets/images/logo.webp" alt="ロゴのイラスト">
+        </div>
+         <!-- ハンバーガーメニュー部分 -->
+      <div class="nav">
+    
+        <!-- ハンバーガーメニューの表示・非表示を切り替えるチェックボックス -->
+        <input id="drawer_input" class="drawer_hidden" type="checkbox">
+    
+        <!-- ハンバーガーアイコン -->
+        <label for="drawer_input" class="drawer_open"><span></span></label>
+    
+        <!-- メニュー -->
+        <nav class="nav_content">
+          <ul class="nav_list">
+            <li class="nav_item"><a href="/index.html">HOME</a></li>
+            <li class="nav_item"><a href="/about.html">ABOUT</a></li>
+            <li class="nav_item"><a href="/works.html">WORKS</a></li>
+            <li class="nav_item"><a href="/contact.html">CONTACT</a></li>
+          </ul>
+          <ul class="sns_box">
+              <li><a href="https://www.figma.com/design/JSQ4Nq4zP5Is8ugrbrzh61/2024%E3%83%9D%E3%83%BC%E3%83%88%E3%83%95%E3%82%A9%E3%83%AA%E3%82%AA?node-id=0-1&t=YRbKGX6xXvLd5fJF-1"><img src="assets/images/sns_figma.webp" alt="figma"></a></li>
+              <li><a href="https://github.com/makikooo/portfolio"><img src="assets/images/sns_github.webp" alt="GitHub"></a></li>
+              <li><a href="https://note.com/karattosawayaka"><img src="assets/images/sns_note.webp" alt="note"></a></li>
+              <li><a href="https://x.com/MakikoWeb"><img src="assets/images/sns_x.webp" alt="x"></a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
-    <main class="contact" id="contact">
-    </main>
+    <main class="main" id="contact">
+        <section class="sec01_about">
+            <div class="container">
+                <p id="circular-text11">Contact Contact Contact Contact Contact Contact Contact Contact Contact Contact </p>
+            </div>
+            <div class="section_title_box">
+                <h2 class="section_title">CONTACT</h2>
+            </div>
+            <div>
+                <h3 class="section_subtitle">連絡先</h3>
+            </div>
+        </section>
+        <section class="sec02_cannot">
+            <div class="cannot_box">
+                <p>メールフォームは使えません<br>
+                    こちらにお問い合わせ下さい</p>
+                <a href="mailto:info@happy-smile.design">メールはこちら</a>
+            </div>
+            <p class="contact_text">ご依頼・ご相談や、ポートフォリオの感想など<br>
+                お気軽にお問い合わせくださいませ。<br>
+                <span class="red">※</span>は必須項目です。</p>
+        </section>
+        <section class="sec03_contact">
+            <table class="contact_table">
+                <tr class="contact_tr">
+                    <th class="contact_th"><label for="name">お名前<span class="red">※</span></label></th>
+                    <td class="contact_td"><input type="text" id="name" required="required"></td>
+                </tr>
+                <tr class="contact_tr">
+                    <th class="contact_th"><label for="furigana">ふりがな</label></th>
+                    <td class="contact_td"><input type="text" id="furigana"></td>
+                </tr>
+                <tr class="contact_tr">
+                    <th class="contact_th"><label for="mail">メールアドレス<span class="red">※</span></label></th>
+                    <td class="contact_td"><input type="mail" id="mail" required="required"></td>
+                </tr>
+                <tr class="contact_tr">
+                    <th class="contact_th"><label for="tel">電話番号</label></th>
+                    <td class="contact_td"><input type="text" id="tel"></td>
+                </tr>
+                <tr class="contact_tr">
+                    <th class="contact_th"><label for="text">お問い合わせ内容<span class="red">※</span></label></th>
+                    <td class="contact_td"><textarea name="text" id="text" cols="30" rows="10"></textarea></td>
+                </tr>
+            </table>
+            <div class="checkbox_box">
+                <input type="checkbox" id="check"><label for="check">個人情報保護方針に同意する</label>
+            </div>
+            <button type="submit" class="to_about_me_button to_contact_button button">送信する</button>
+     
+            <div class="send_text">
+                お問い合わせのご返信は2日以内を心がけております。(土日祝日以外)お客様のご利用環境、また迷惑メール対策等の設定により、お返事が届かない場合があります。「info@happy-smile.design」からのメール受信が可能な設定にしていただきますようお願いいたします。5日経過しても返信のない場合、大変お手数をおかけしますが再度お送りいただくよう、お願い申し上げます。
+            </div>     
+        </section>
 
-    <footer>
+        
+        <section class=sec04_sns>
+            <div class="sns_wrapper">
+                <a class="figma_wrapper" href="https://www.figma.com/design/JSQ4Nq4zP5Is8ugrbrzh61/2024%E3%83%9D%E3%83%BC%E3%83%88%E3%83%95%E3%82%A9%E3%83%AA%E3%82%AA?node-id=23-22&t=tXJ14ZHdibpvzJTV-1">
+                    <p id="circular-text5">このホームページのデザインはこちら このホームページのデザインはこちら</p>
+                    <img class="figma_icon" src="assets/images/sns_figma_big.webp" alt="figmaのアイコン">
+                    <p class="to_design">デザインを見る</p>
+                    <span class="dli-arrow-right"></span>
+                </a>
+                <a class="github_wrapper" href="https://github.com/makikooo/portfolio">
+                    <p id="circular-text6">このホームページのコードはこちら このホームページのコードはこちら</p>
+                    <img class="figma_icon" src="assets/images/sns_GitHub_big.webp" alt="GitHubのアイコン">
+                    <p class="to_design">コードを見る</p>
+                    <span class="dli-arrow-right"></span>
+                </a>
+                <a class="figma_wrapper" href="https://www.figma.com/design/JSQ4Nq4zP5Is8ugrbrzh61/2024%E3%83%9D%E3%83%BC%E3%83%88%E3%83%95%E3%82%A9%E3%83%AA%E3%82%AA?node-id=23-22&t=tXJ14ZHdibpvzJTV-1">
+                    <p id="circular-text7">使い方につまづいた所を書いています 使い方につまづいた所を書いています</p>
+                    <img class="figma_icon" src="assets/images/sns_note_big.webp" alt="noteのアイコン">
+                    <p class="to_design">Noteを見る</p>
+                    <span class="dli-arrow-right"></span>
+                </a>
+                <a class="figma_wrapper" href="https://www.figma.com/design/JSQ4Nq4zP5Is8ugrbrzh61/2024%E3%83%9D%E3%83%BC%E3%83%88%E3%83%95%E3%82%A9%E3%83%AA%E3%82%AA?node-id=23-22&t=tXJ14ZHdibpvzJTV-1">
+                    <p id="circular-text8">有意義なことはつぶやいていませんが勉強したことをたまにつぶやいています</p>
+                    <img class="figma_icon" src="assets/images/sns_x_big.webp" alt="xのアイコン">
+                    <p class="to_design">Xを見る</p>
+                    <span class="dli-arrow-right"></span>
+                </a>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <a class="go_to_top" href="/index.html">
+            <p>TOPへ戻る</p>
+            <span class="dli-arrow-up"></span>
+        </a>
+        <small>©2024  PORTFOLIO Of  Makiko Karasawa</small>
     </footer>
-    <!-- jQueryの読み込み -->
-    <script
-        src="https://code.jquery.com/jquery-3.7.1.min.js"
-        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
-        crossorigin="anonymous"
-    ></script>
 
     <script src="assets/js/main.js"></script>
 
