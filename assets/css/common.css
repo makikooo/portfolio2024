@@ -2,6 +2,7 @@
 /* 共通スタイル */
 a {
   text-decoration: none;
+  color: #2E1000;
 }
 
 ul {
@@ -75,4 +76,223 @@ body {
   font-family: "Zen Kaku Gothic New", sans-serif;
   background-color: #F0FFF8;
   color: #2E1000;
+}
+
+/* ヘッダー */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  padding: 20px 40px;
+  z-index: 99999;
+}
+@media (width < 768px) {
+  .header {
+    padding: 20px;
+  }
+}
+.header .logo_box {
+  width: 60px;
+  height: 60px;
+}
+@media (width < 768px) {
+  .header .logo_box {
+    width: 50px;
+    height: 50px;
+  }
+}
+.header .logo_box .logo {
+  max-width: 100%;
+}
+
+/* ここから下がハンバーガーメニューに関するCSS */
+/* https://web-camp.io/magazine/archives/88361 */
+/* チェックボックスを非表示にする */
+.drawer_hidden {
+  display: none;
+}
+
+/* ハンバーガーアイコンの設置スペース */
+.drawer_open {
+  display: flex;
+  height: 60px;
+  width: 60px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 100; /* 重なり順を一番上にする */
+  cursor: pointer;
+}
+
+/* ハンバーガーメニューのアイコン */
+.drawer_open span,
+.drawer_open span:before,
+.drawer_open span:after {
+  content: "";
+  display: block;
+  height: 3px;
+  width: 25px;
+  border-radius: 3px;
+  background: #DAD5D5;
+  transition: 0.5s;
+  position: absolute;
+}
+
+/* 三本線の一番上の棒の位置調整 */
+.drawer_open span:before {
+  bottom: 8px;
+}
+
+/* 三本線の一番下の棒の位置調整 */
+.drawer_open span:after {
+  top: 8px;
+}
+
+/* アイコンがクリックされたら真ん中の線を透明にする */
+#drawer_input:checked ~ .drawer_open span {
+  background: rgba(255, 255, 255, 0);
+}
+
+/* アイコンがクリックされたらアイコンが×印になように上下の線を回転 */
+#drawer_input:checked ~ .drawer_open span::before {
+  bottom: 0;
+  transform: rotate(45deg);
+}
+
+#drawer_input:checked ~ .drawer_open span::after {
+  top: 0;
+  transform: rotate(-45deg);
+}
+
+/* メニューのデザイン*/
+.nav_content {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  padding-top: 80px;
+  top: 0;
+  left: 100%; /* メニューを画面の外に飛ばす */
+  z-index: 99;
+  background: #CBFFE7;
+  transition: 0.5s;
+  /* メニュー黒ポチを消す */
+}
+.nav_content .nav_list {
+  list-style: none;
+  text-align: center;
+  font-family: var(--mont);
+  color: var(--font-color);
+}
+.nav_content .nav_item {
+  margin-bottom: 25px;
+  font-size: 24px;
+}
+
+.sns_box {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* アイコンがクリックされたらメニューを表示 */
+#drawer_input:checked ~ .nav_content {
+  left: 0; /* メニューを画面に入れる */
+}
+
+.section_title {
+  display: inline-block;
+  margin: 0;
+  padding-bottom: 10px;
+  border-bottom: solid 1px;
+  -o-border-image: linear-gradient(90deg, #E8B3B3, #E5E6B0, #ADE2C5, #A8AADE) 1;
+     border-image: linear-gradient(90deg, #E8B3B3, #E5E6B0, #ADE2C5, #A8AADE) 1;
+  font-size: 32px;
+  font-weight: bold;
+  font-family: "Montserrat", sans-serif;
+  filter: hue-rotate(360deg);
+  animation: textGradientAnimation 10s infinite;
+  background: linear-gradient(90deg, #E8B3B3, #E5E6B0, #ADE2C5, #A8AADE);
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-size: 100%;
+  color: transparent;
+  letter-spacing: 21px;
+}
+@media screen and (max-width: 768px) {
+  .section_title {
+    font-size: 18px;
+    letter-spacing: 0.5em;
+  }
+}
+
+.section_subtitle {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 24px;
+  font-weight: bold;
+  font-family: "Montserrat", sans-serif;
+  background: linear-gradient(90deg, #E8B3B3, #E5E6B0, #ADE2C5, #A8AADE);
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-size: 100%;
+  color: transparent;
+  filter: hue-rotate(360deg);
+  animation: textGradientAnimation 10s infinite;
+  letter-spacing: 20px;
+}
+@media screen and (max-width: 768px) {
+  .section_subtitle {
+    font-size: 16px;
+    letter-spacing: 0.5em;
+  }
+}
+
+@keyframes textGradientAnimation {
+  0%, 100% {
+    filter: hue-rotate(0deg);
+  }
+  50% {
+    filter: hue-rotate(360deg);
+  }
+}
+.to_about_me_button {
+  margin: 250px auto 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 500px;
+  padding: 15px 100px;
+  border-radius: 100.5px;
+  background-color: #F2A6C4;
+  color: #ffffff;
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  outline: 1px solid;
+  outline-color: #F2A6C4;
+  outline-offset: 0px;
+  text-shadow: none;
+  transition: all 1.2s cubic-bezier(0.2, 1, 0.2, 1);
+  z-index: 10000;
+  position: relative;
+}
+@media screen and (max-width: 768px) {
+  .to_about_me_button {
+    width: 80%;
+    padding: 15px;
+    font-size: 20px;
+  }
+}
+
+/* マウスオーバー時 */
+.to_about_me_button:hover {
+  border-color: #ffffff;
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 255, 255, 0.2);
+  outline-color: transparent;
+  outline-offset: 12px;
+  cursor: pointer;
+  z-index: 10000;
 }/*# sourceMappingURL=common.css.map */

@@ -175,13 +175,256 @@
   background: #F2A6C4;
 }
 
-#home {
-  background-color: #F2A6C4;
+#home.main {
+  /* sec02 can */
+}
+#home.main .sec01_about {
+  text-align: center;
+}
+#home.main .sec01_about .container {
+  -webkit-clip-path: inset(0 0 50% 0);
+          clip-path: inset(0 0 50% 0);
+  width: 100%;
+  aspect-ratio: 2/1;
+  z-index: 10;
+  position: relative;
+}
+@media screen and (max-width: 1000px) {
+  #home.main .sec01_about .container {
+    -webkit-clip-path: inset(50% 0);
+            clip-path: inset(50% 0);
+  }
+}
+#home.main .sec01_about .section_title_box {
+  margin-top: -400px;
+}
+@media (width < 840px) {
+  #home.main .sec01_about .section_title_box {
+    margin-top: -300px;
+  }
+}
+@media (width < 620px) {
+  #home.main .sec01_about .section_title_box {
+    margin-top: -250px;
+  }
+}
+@media (width < 530px) {
+  #home.main .sec01_about .section_title_box {
+    margin-top: -200px;
+  }
+}
+@media screen and (max-width: 480px) {
+  #home.main .sec01_about .section_title_box {
+    margin-top: -150px;
+  }
+}
+#home.main .sec01_about .about_wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+#home.main .sec01_about .about_wrapper .catch_phrase_wrapper {
+  margin-top: 80px;
+  position: relative;
+  height: 397px;
+  width: 797px;
+  background-color: #FCFDD8;
+  border-radius: 47% 53% 55% 45%/46% 32% 68% 54%;
+}
+@media screen and (max-width: 1000px) {
+  #home.main .sec01_about .about_wrapper .catch_phrase_wrapper {
+    width: 70%;
+  }
 }
 @media screen and (max-width: 768px) {
-  #home {
-    background-color: #000;
+  #home.main .sec01_about .about_wrapper .catch_phrase_wrapper {
+    width: 85%;
+    margin-top: 30px;
   }
+}
+#home.main .sec01_about .about_wrapper .catch_phrase_wrapper .catch_phrase {
+  width: 420px;
+  height: 592px;
+  font-family: "Yomogi", cursive;
+  font-size: 30px;
+  color: #2E1000;
+  -webkit-text-stroke: 2px #2E1000;
+  text-stroke: 2px #2E1000; /* 文字の縁取り */
+  position: absolute;
+  top: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+@media screen and (max-width: 768px) {
+  #home.main .sec01_about .about_wrapper .catch_phrase_wrapper .catch_phrase {
+    font-size: 24px;
+  }
+}
+#home.main .sec01_about .about_wrapper .catch_phrase_wrapper .catch_phrase .catch_phrase_dot {
+  font-size: 35.82px;
+  color: #9F3A04;
+  -webkit-text-stroke: 3px #9F3A04;
+  text-stroke: 3px #9F3A04; /* 文字の縁取り */
+  /* 文字上のドットの設定 */
+  background-image: radial-gradient(circle at center, #9F3A04 20%, transparent 20%); /* 点の色とサイズ調整 */
+  background-position: top right; /* 点の位置 */
+  background-repeat: repeat-x; /* 横方向に繰り返し */
+  background-size: 1em 0.3em; /* 点の間隔とサイズ調整 */
+  padding-top: 0.03em; /* 縦方向の位置調整 */
+}
+@media screen and (max-width: 768px) {
+  #home.main .sec01_about .about_wrapper .catch_phrase_wrapper .catch_phrase .catch_phrase_dot {
+    font-size: 26px;
+  }
+}
+#home.main .sec01_about .about_wrapper .catch_phrase_wrapper .catch_phrase .catch_phrase_dot .catch_phrase_brown {
+  font-size: 38px;
+  color: #9F3A04;
+  -webkit-text-stroke: 3px #9F3A04;
+  text-stroke: 3px #9F3A04; /* 文字の縁取り */
+}
+@media screen and (max-width: 768px) {
+  #home.main .sec01_about .about_wrapper .catch_phrase_wrapper .catch_phrase .catch_phrase_dot .catch_phrase_brown {
+    font-size: 24px;
+  }
+}
+#home.main .sec01_about .about_wrapper .about_me_wrapper {
+  position: absolute;
+  top: 234px;
+  left: 40%;
+  width: 725px;
+  height: 450px;
+  border-radius: 63% 37% 72% 28%/51% 59% 41% 49%;
+  background-color: #CCEAC7;
+}
+@media screen and (max-width: 1280px) {
+  #home.main .sec01_about .about_wrapper .about_me_wrapper {
+    width: 60%;
+  }
+}
+@media screen and (max-width: 1000px) {
+  #home.main .sec01_about .about_wrapper .about_me_wrapper {
+    left: 30%;
+    width: 50%;
+    height: 460px;
+  }
+}
+@media (width < 838px) {
+  #home.main .sec01_about .about_wrapper .about_me_wrapper {
+    left: 30%;
+    width: 70%;
+  }
+}
+@media screen and (max-width: 768px) {
+  #home.main .sec01_about .about_wrapper .about_me_wrapper {
+    top: 170px;
+  }
+}
+@media (width < 640px) {
+  #home.main .sec01_about .about_wrapper .about_me_wrapper {
+    left: 10%;
+  }
+}
+@media (width < 528px) {
+  #home.main .sec01_about .about_wrapper .about_me_wrapper {
+    width: 90%;
+    left: 3%;
+  }
+}
+@media screen and (max-width: 480px) {
+  #home.main .sec01_about .about_wrapper .about_me_wrapper {
+    height: 480px;
+    width: 100%;
+  }
+}
+#home.main .sec01_about .about_wrapper .about_me_wrapper .about_me {
+  position: absolute;
+  left: 145px;
+  top: 63px;
+  width: 60%;
+  text-align: left;
+}
+@media screen and (max-width: 1000px) {
+  #home.main .sec01_about .about_wrapper .about_me_wrapper .about_me {
+    left: 25%;
+  }
+}
+@media (width < 838px) {
+  #home.main .sec01_about .about_wrapper .about_me_wrapper .about_me {
+    left: 20%;
+  }
+}
+#home.main .sec01_about .about_wrapper .about_me_wrapper .about_me .name {
+  font-size: 24px;
+  font-weight: bold;
+  font-family: "Zen Maru Gothic", serif;
+  margin-bottom: 20px;
+}
+#home.main .sec01_about .about_wrapper .about_me_wrapper .about_me .about_me_text {
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-size: 18px;
+  line-height: 150%;
+}
+@media (width < 1215px) {
+  #home.main .sec01_about .about_wrapper .about_me_wrapper .about_me .about_me_text {
+    width: 100%;
+  }
+}
+@media (width < 528px) {
+  #home.main .sec01_about .about_wrapper .about_me_wrapper .about_me .about_me_text {
+    width: 110%;
+  }
+}
+#home.main .sec01_about .about_wrapper .about_me_img_wrapper {
+  position: absolute;
+  top: 235px;
+  left: 29%;
+  width: 325px;
+  height: 355px;
+  border-radius: 39% 61% 52% 48%/40% 45% 55% 60%;
+  background-image: url(/assets/images/karattosawayaka.webp);
+  background-position: 50% 13%;
+  background-size: 110%;
+}
+@media (width < 1625px) {
+  #home.main .sec01_about .about_wrapper .about_me_img_wrapper {
+    left: 18%;
+  }
+}
+@media screen and (max-width: 1000px) {
+  #home.main .sec01_about .about_wrapper .about_me_img_wrapper {
+    width: 200px;
+    height: 220px;
+  }
+}
+@media screen and (max-width: 768px) {
+  #home.main .sec01_about .about_wrapper .about_me_img_wrapper {
+    left: 14%;
+    top: 170px;
+  }
+}
+@media (width < 670px) {
+  #home.main .sec01_about .about_wrapper .about_me_img_wrapper {
+    left: 10%;
+  }
+}
+@media (width < 640px) {
+  #home.main .sec01_about .about_wrapper .about_me_img_wrapper {
+    left: 65%;
+  }
+}
+@media (width < 566px) {
+  #home.main .sec01_about .about_wrapper .about_me_img_wrapper {
+    width: 150px;
+    height: 150px;
+  }
+}
+#home.main .sec02_can {
+  margin-top: 80px;
+  text-align: center;
+  overflow: hidden;
+  margin-bottom: 50px;
 }
 
 #about {

@@ -162,10 +162,202 @@
     
 
 #home {
-    background-color: $c-pink;
-    @include mq(md) {
-        background-color: #000;
+    &.main {
+        .sec01_about {
+            text-align: center;
+            & .container {
+                clip-path: inset(0 0 50% 0);
+                width: 100%;
+                aspect-ratio: 2 / 1;
+                z-index: 10;
+                position: relative;
+                @include mq(lg) {
+                    clip-path: inset(50% 0);
+                }
+            }
+            & .section_title_box {
+                margin-top: -400px;
+                @media (width < 840px){
+                    margin-top: -300px;
+                }
+                @media (width < 620px){
+                    margin-top: -250px;
+                }
+                @media (width < 530px){
+                    margin-top: -200px;
+                }
+                @include mq(sm){
+                    margin-top: -150px;
+                }
+            }
+            .about_wrapper {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+                .catch_phrase_wrapper {
+                    margin-top: 80px;
+                    position: relative;
+                    height: 397px;
+                    width: 797px;
+                    background-color: #FCFDD8;
+                    border-radius: 47% 53% 55% 45% / 46% 32% 68% 54%;
+                    @include mq(lg){
+                        width: 70%;
+                    }
+                    @include mq(md){
+                        width: 85%;
+                        margin-top: 30px;
+                    }
+                    & .catch_phrase {
+                        width: 420px;
+                        height: 592px;
+                        font-family: $yomogi;
+                        font-size: 30px;
+                        color: #2E1000;
+                        -webkit-text-stroke: 2px #2E1000;
+                        text-stroke: 2px #2E1000;  /* 文字の縁取り */
+                        position: absolute;
+                        top: 80px;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        @include mq(md){
+                            font-size: 24px;
+                        }
+                        & .catch_phrase_dot {
+                            font-size: 35.82px;
+                            color: #9F3A04;
+                            -webkit-text-stroke: 3px #9F3A04;
+                            text-stroke: 3px #9F3A04;  /* 文字の縁取り */
+                            /* 文字上のドットの設定 */
+                            background-image: radial-gradient(circle at center, #9F3A04 20%, transparent 20%); /* 点の色とサイズ調整 */
+                            background-position: top right; /* 点の位置 */
+                            background-repeat: repeat-x; /* 横方向に繰り返し */
+                            background-size: 1em 0.3em; /* 点の間隔とサイズ調整 */
+                            padding-top: 0.03em; /* 縦方向の位置調整 */
+                            @include mq(md){
+                                font-size: 26px;
+                            }
+                            .catch_phrase_brown {
+                                font-size: 38px;
+                                color: #9F3A04;
+                                -webkit-text-stroke: 3px #9F3A04;
+                                text-stroke: 3px #9F3A04;  /* 文字の縁取り */
+                                @include mq(md){
+                                    font-size: 24px;
+                                }
+                            }
+                        }
+                    }
+                }
+                .about_me_wrapper {
+                    position: absolute;
+                    top: 234px;
+                    left: 40%;
+                    width: 725px;
+                    height: 450px;
+                    border-radius: 63% 37% 72% 28% / 51% 59% 41% 49%;
+                    background-color: #CCEAC7;
+                    @include mq(xl){
+                        width: 60%;
+                    }
+                    @include mq(lg){
+                        left: 30%;
+                        width: 50%;
+                        height: 460px;
+                    }
+                    @media (width < 838px){
+                        left: 30%;
+                        width: 70%;
+                    }
+                    @include mq(md){
+                        top: 170px;
+                    }
+                    @media (width < 640px){
+                        left: 10%;
+                    }
+                    @media (width < 528px){
+                        width: 90%;
+                        left: 3%;
+                    }
+                    @include mq(sm){
+                        height: 480px;
+                        width: 100%;
+                    }
+                    .about_me {
+                        position: absolute;
+                        left: 145px;
+                        top: 63px;
+                        width: 60%;
+                        text-align: left;
+                        @include mq(lg){
+                            left: 25%;
+                        }
+                        @media (width < 838px){
+                            left: 20%;
+                        }
+                        .name {
+                            font-size: 24px;
+                            font-weight: bold;
+                            font-family: $zenmaru;
+                            margin-bottom: 20px;
+                        }
+                        .about_me_text {
+                            font-family: $zenkaku;
+                            font-size: 18px;
+                            line-height: 150%;
+                            @media (width < 1215px){
+                                width: 100%;
+                            }
+                            @media (width < 528px){
+                                width: 110%;
+                            }
+                        }
+                    }
+                }
+                .about_me_img_wrapper {
+                    position: absolute;
+                    top: 235px;
+                    left: 29%;
+                    width: 325px;
+                    height: 355px;
+                    border-radius: 39% 61% 52% 48% / 40% 45% 55% 60% ;
+                    background-image: url(/assets/images/karattosawayaka.webp);
+                    background-position: 50% 13%;
+                    background-size: 110%;
+                    @media (width < 1625px){
+                        left: 18%;
+                    }
+                    @include mq(lg){
+                        width: 200px;
+                        height: 220px;
+                    }
+                    @include mq(md){
+                        left: 14%;
+                        top: 170px;
+                    }
+                    @media (width < 670px){
+                        left: 10%;
+                    }
+                    @media (width < 640px){
+                        left: 65%;
+                    }
+                    @media (width < 566px){
+                        width: 150px;
+                        height: 150px;
+                    }
+                }
+            }
+        }
+        /* sec02 can */
+        .sec02_can {
+            margin-top: 80px;
+            text-align: center;
+            overflow: hidden;
+            margin-bottom: 50px;
+        }
     }
+
 }
 
 
