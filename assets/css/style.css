@@ -1394,4 +1394,44 @@
 }
 #works .to_contact_button {
   margin-top: 70px;
+}
+
+#about_sle {
+  width: 90%;
+  margin: 0 auto;
+}
+#about_sle .sec01_title {
+  text-align: center;
+}
+#about_sle .sec02_flex {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+#about_sle .sec02_flex img {
+  width: 50%;
+}
+#about_sle .sec02_flex .sec02_right {
+  width: 50%;
+  text-align: center;
+}
+#about_sle .sec02_flex .sec02_right .sub_title {
+  width: 60%;
+  margin: 0 auto 40px;
+  padding: 10px;
+  border: 2px solid #F2A6C4;
+  border-radius: 20px;
+  font-size: 18px;
+  font-weight: 700;
+}
+#about_sle .sec02_flex .sec02_right p:first-of-type {
+  margin: 0 auto 20px;
+  width: 150px;
+  font-weight: 700;
+  padding-bottom: 5px;
+  border-bottom: 2px solid #2E1000;
+}
+#about_sle .sec02_flex .sec02_right p {
+  margin-bottom: 15px;
 }/*# sourceMappingURL=style.css.map */
