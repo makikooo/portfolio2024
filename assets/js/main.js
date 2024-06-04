@@ -339,7 +339,7 @@ let option8 = {
 let option9 = {
   target_element: '#circular-text9', // taget HTML element ('#id' '.class' etc)
   diameter: 820, // diameter of a circle (min 1 max 10)
-  position_top: 80, // circular position y (%)
+  position_top: 70, // circular position y (%)
   position_left: 50, // circular position x (%)
   font_size: 20, // font size (px)
   last_space: true, // Add a space after the last character. (true or false)
