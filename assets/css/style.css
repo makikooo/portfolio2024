@@ -1320,20 +1320,25 @@
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
-  gap: 20px;
-  /* https://blog.raizzenet.com/mouse-hover-caption-effects-in-css/#i-sample2 */
+  gap: 40px 20px;
 }
-#works .sec02_works_links .works_links_wrapper .works_link {
+#works .sec02_works_links .works_links_wrapper .work_link_box .link_title {
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+#works .sec02_works_links .works_links_wrapper .work_link_box .works_link {
   display: block;
   position: relative;
   border-radius: 20px;
   width: 300px;
+  margin-bottom: 10px;
+  /* https://blog.raizzenet.com/mouse-hover-caption-effects-in-css/#i-sample2 */
 }
-#works .sec02_works_links .works_links_wrapper .works_link .link_img {
+#works .sec02_works_links .works_links_wrapper .work_link_box .works_link .link_img {
   display: block;
   width: 100%;
 }
-#works .sec02_works_links .works_links_wrapper .mask {
+#works .sec02_works_links .works_links_wrapper .work_link_box .works_link .mask {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -1347,14 +1352,45 @@
   background: linear-gradient(#FCFDD8, #E8B3B3);
   border-radius: 20px;
   transition: all 0.6s ease;
-  text-align: center;
 }
-#works .sec02_works_links .works_links_wrapper .works_link:hover .mask {
+#works .sec02_works_links .works_links_wrapper .work_link_box .works_link:hover .mask {
   opacity: 0.9; /* マスクを表示する */
   padding-top: 10px; /* ホバーで下にずらす */
 }
-#works .sec02_works_links .works_links_wrapper .works_link:hover .mask .caption {
+#works .sec02_works_links .works_links_wrapper .work_link_box .works_link:hover .mask .caption {
   font-size: 130%;
+}
+#works .sec02_works_links .works_links_wrapper .work_link_box .go_to_page_flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+}
+#works .sec02_works_links .works_links_wrapper .work_link_box .go_to_page_flex .to_introduce,
+#works .sec02_works_links .works_links_wrapper .work_link_box .go_to_page_flex .to_site {
+  width: 50%;
+  font-size: 15px;
+  text-align: center;
+  display: block;
+  padding: 5px;
+  background-color: #FCFDD8;
+  border: 1px solid #2E1000;
+  border-radius: 20px;
+}
+#works .sec02_works_links .works_links_wrapper .work_link_box .go_to_page_center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#works .sec02_works_links .works_links_wrapper .work_link_box .go_to_page_center .to_site {
+  width: 80%;
+  font-size: 15px;
+  text-align: center;
+  display: block;
+  padding: 5px;
+  background-color: #FCFDD8;
+  border: 1px solid #2E1000;
+  border-radius: 20px;
 }
 #works .to_contact_button {
   margin-top: 70px;
