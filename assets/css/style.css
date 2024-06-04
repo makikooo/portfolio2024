@@ -1132,13 +1132,46 @@
   margin-top: 70px;
 }
 
-#contact .section_title_box {
-  margin-top: -300px;
+#contact .sec01_about .container {
+  -webkit-clip-path: inset(0 0 50% 0);
+          clip-path: inset(0 0 50% 0);
+  width: 100%;
+  aspect-ratio: 2/1;
+  z-index: 10;
+  position: relative;
 }
-@media (width < 1000px) {
-  #contact .section_title_box {
-    margin-top: -480px;
+@media screen and (max-width: 1000px) {
+  #contact .sec01_about .container {
+    -webkit-clip-path: inset(50% 0);
+            clip-path: inset(50% 0);
   }
+}
+#contact .sec01_about .section_title_box {
+  text-align: center;
+  margin-top: -375px;
+}
+@media (width < 840px) {
+  #contact .sec01_about .section_title_box {
+    margin-top: -300px;
+  }
+}
+@media (width < 620px) {
+  #contact .sec01_about .section_title_box {
+    margin-top: -250px;
+  }
+}
+@media (width < 530px) {
+  #contact .sec01_about .section_title_box {
+    margin-top: -200px;
+  }
+}
+@media (width < 430px) {
+  #contact .sec01_about .section_title_box {
+    margin-top: -150px;
+  }
+}
+#contact .sec01_about .section_subtitle_box {
+  text-align: center;
 }
 #contact .sec02_cannot {
   width: 90%;
@@ -1147,17 +1180,17 @@
 #contact .sec02_cannot .cannot_box {
   width: 40%;
   margin: 0 auto;
-  background: var(--pink);
+  background: #F2A6C4;
   text-align: center;
   padding: 25px 100px;
   border-radius: 65px;
 }
-@media (width < 1000px) {
+@media screen and (max-width: 1000px) {
   #contact .sec02_cannot .cannot_box {
     width: 60%;
   }
 }
-@media (width < 768px) {
+@media screen and (max-width: 768px) {
   #contact .sec02_cannot .cannot_box {
     padding: 15px 50px;
   }
@@ -1169,7 +1202,7 @@
 }
 #contact .sec02_cannot .contact_text {
   width: 360px;
-  margin: 60px auto 100px;
+  margin: 60px auto 20px;
 }
 #contact .sec03_contact .contact_table {
   width: 60%;
@@ -1184,57 +1217,52 @@
     width: 90%;
   }
 }
-@media (width < 1000px) and (width < 500px) {
-  #contact .sec03_contact .contact_table .contact_table tbody .contact_tr {
+@media (width < 500px) {
+  #contact .sec03_contact .contact_table tbody .contact_tr {
     width: 100%;
   }
 }
-@media (width < 1000px) {
-  #contact .sec03_contact .contact_table .contact_table tbody .contact_tr .contact_th {
-    width: 15%;
-    font-weight: normal;
-  }
+#contact .sec03_contact .contact_table tbody .contact_tr .contact_th {
+  width: 15%;
+  font-weight: normal;
 }
-@media (width < 1000px) and (width < 768px) {
-  #contact .sec03_contact .contact_table .contact_table tbody .contact_tr .contact_th {
+@media (width < 768px) {
+  #contact .sec03_contact .contact_table tbody .contact_tr .contact_th {
     display: block;
     width: 100%;
   }
 }
-@media (width < 1000px) {
-  #contact .sec03_contact .contact_table .contact_table tbody .contact_tr .contact_td {
-    width: 80%;
-    height: 70px;
-  }
+#contact .sec03_contact .contact_table tbody .contact_tr .contact_td {
+  width: 80%;
+  height: 70px;
 }
-@media (width < 1000px) and (width < 768px) {
-  #contact .sec03_contact .contact_table .contact_table tbody .contact_tr .contact_td {
+@media (width < 768px) {
+  #contact .sec03_contact .contact_table tbody .contact_tr .contact_td {
     display: block;
     width: 100%;
   }
 }
-@media (width < 1000px) {
-  #contact .sec03_contact .contact_table .contact_table tbody .contact_tr .contact_td input,
-  #contact .sec03_contact .contact_table .contact_table tbody .contact_tr .contact_td textarea {
-    width: 100%;
-    height: 100%;
-    background: var(--bg-color);
-    border: 3px solid var(--pink);
-    border-left: none;
-    border-top: none;
-    font-size: 18px;
-  }
-  #contact .sec03_contact .contact_table .contact_table tbody .contact_tr .contact_td .checkbox_box {
-    width: 300px;
-    margin: 0 auto;
-    font-size: 18px;
-  }
-  #contact .sec03_contact .contact_table .contact_table tbody .contact_tr .contact_td .checkbox_box input[type=checkbox] {
-    width: 40px;
-  }
+#contact .sec03_contact .contact_table tbody .contact_tr .contact_td input,
+#contact .sec03_contact .contact_table tbody .contact_tr .contact_td textarea {
+  width: 100%;
+  height: 100%;
+  background: #F0FFF8;
+  border: 3px solid #F2A6C4;
+  border-left: none;
+  border-top: none;
+  font-size: 18px;
+}
+#contact .sec03_contact .checkbox_box {
+  width: 300px;
+  margin: 0 auto;
+  font-size: 18px;
+}
+#contact .sec03_contact .checkbox_box input[type=checkbox] {
+  width: 40px;
 }
 #contact .sec03_contact .button {
   border: none;
+  margin-top: 40px;
 }
 #contact .sec03_contact .send_text {
   width: 80%;

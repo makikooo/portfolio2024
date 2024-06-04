@@ -2,11 +2,35 @@
 
 
 #contact{
-
-    .section_title_box {
-        margin-top: -300px;
-        @media (width < 1000px){
-            margin-top: -480px;
+    .sec01_about {
+        & .container {
+            clip-path: inset(0 0 50% 0);
+            width: 100%;
+            aspect-ratio: 2 / 1;
+            z-index: 10;
+            position: relative;
+            @include mq(lg) {
+                clip-path: inset(50% 0);
+            }
+        }
+        .section_title_box {
+            text-align: center;
+            margin-top: -375px;
+            @media (width < 840px){
+                margin-top: -300px;
+            }
+            @media (width < 620px){
+                margin-top: -250px;
+            }
+            @media (width < 530px){
+                margin-top: -200px;
+            }
+            @media (width < 430px){
+                margin-top: -150px;
+            }
+        }
+        .section_subtitle_box {
+            text-align: center;
         }
     }
     .sec02_cannot {
@@ -15,14 +39,14 @@
         .cannot_box {
             width: 40%;
             margin: 0 auto;
-            background: var(--pink);
+            background: $c-pink;
             text-align: center;
             padding: 25px 100px;
             border-radius: 65px;
-            @media (width < 1000px){
+            @include mq(lg){
                 width: 60%;
             }
-            @media (width < 768px){
+            @include mq(md){
                 padding: 15px 50px;
             }
             @media (width < 500px){
@@ -31,7 +55,7 @@
         }
         .contact_text {
             width: 360px;
-            margin: 60px auto 100px;
+            margin: 60px auto 20px;
         }
     }
     .sec03_contact {
@@ -45,53 +69,53 @@
             @media (width < 1000px) {
                 .contact_table{
                     width: 90%;
-                    & tbody {
-                        
-                        .contact_tr {
-                            @media (width < 500px){
-                                width: 100%;
-                            }
-                            .contact_th {
-                                width: 15%;
-                                font-weight: normal;
-                                @media (width < 768px) {
-                                    display: block;
-                                    width: 100%;
-                                }
-                            }
-                            .contact_td {
-                                width: 80%;
-                                height: 70px;
-                                @media (width < 768px) {
-                                    display: block;
-                                    width: 100%;
-                                }
-                                input,
-                                textarea {
-                                    width: 100%;
-                                    height: 100%;
-                                    background: var(--bg-color);
-                                    border: 3px solid var(--pink);
-                                    border-left: none;
-                                    border-top: none;
-                                    font-size: 18px;
-                                }
-                                .checkbox_box {
-                                    width: 300px;
-                                    margin: 0 auto;
-                                    font-size: 18px;
-                                    input[type="checkbox"] {
-                                        width: 40px;
-                                    }
-                                }
-                            }
+                }
+            }
+            & tbody {
+                .contact_tr {
+                    @media (width < 500px){
+                        width: 100%;
+                    }
+                    .contact_th {
+                        width: 15%;
+                        font-weight: normal;
+                        @media (width < 768px) {
+                            display: block;
+                            width: 100%;
+                        }
+                    }
+                    .contact_td {
+                        width: 80%;
+                        height: 70px;
+                        @media (width < 768px) {
+                            display: block;
+                            width: 100%;
+                        }
+                        input,
+                        textarea {
+                            width: 100%;
+                            height: 100%;
+                            background: $bg-color;
+                            border: 3px solid $c-pink;
+                            border-left: none;
+                            border-top: none;
+                            font-size: 18px;
                         }
                     }
                 }
             }
         }
+        .checkbox_box {
+            width: 300px;
+            margin: 0 auto;
+            font-size: 18px;
+            input[type="checkbox"] {
+                width: 40px;
+            }
+        }
         .button {
             border: none;
+            margin-top: 40px;
         }
         .send_text {
             width: 80%;

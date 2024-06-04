@@ -370,8 +370,8 @@ let option10 = {
 };
 let option11 = {
   target_element: '#circular-text11', // taget HTML element ('#id' '.class' etc)
-  diameter: 900, // diameter of a circle (min 1 max 10)
-  position_top: 89, // circular position y (%)
+  diameter: 800, // diameter of a circle (min 1 max 10)
+  position_top: 70, // circular position y (%)
   position_left: 50, // circular position x (%)
   font_size: 20, // font size (px)
   last_space: true, // Add a space after the last character. (true or false)
@@ -401,24 +401,6 @@ RotateCircularTextAnimation(option11);
 
 
 // GSAPで一部横スクロール
-// https://qiita.com/nakkie08/items/68f8f7065e00ffe650cb
-
-// const listWrapperEl = document.querySelector('.side-scroll-list-wrapper');
-// const listEl = document.querySelector('.side-scroll-list');
-
-// gsap.to(listEl, {
-//   x: () => -(listEl.clientWidth - listWrapperEl.clientWidth),
-//   ease: 'none',
-//   scrollTrigger: {
-//     trigger: '.side-scroll',
-//     start: 'top top', // 要素の上端（top）が、ビューポートの上端（top）にきた時
-//     end: () => `+=${listEl.clientWidth - listWrapperEl.clientWidth}`,
-//     scrub: true,
-//     pin: true,
-//     anticipatePin: 1,
-//     invalidateOnRefresh: true,
-//   },
-// });
 
 gsap.registerPlugin(ScrollTrigger);
 const wrapper = document.getElementById('wrapper');
