@@ -447,6 +447,32 @@
             clip-path: inset(50% 0);
   }
 }
+#home.main .sec02_can .section_title_box {
+  margin-top: -375px;
+}
+@media (width < 840px) {
+  #home.main .sec02_can .section_title_box {
+    margin-top: -300px;
+  }
+}
+@media (width < 620px) {
+  #home.main .sec02_can .section_title_box {
+    margin-top: -250px;
+  }
+}
+@media (width < 530px) {
+  #home.main .sec02_can .section_title_box {
+    margin-top: -200px;
+  }
+}
+@media (width < 430px) {
+  #home.main .sec02_can .section_title_box {
+    margin-top: -150px;
+  }
+}
+#home.main .sec02_can .section_title_box .section_title {
+  letter-spacing: 0.2em;
+}
 #home.main .side-scroll .wrapper {
   overflow: hidden;
   position: relative;
@@ -576,12 +602,15 @@
 }
 #home.main .sec04_works .sec04_flex_box {
   z-index: 999999;
-  margin-top: -180px;
+  width: 80%;
+  margin: -180px auto 0;
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
-  justify-content: space-around;
   align-items: center;
+}
+#home.main .sec04_works .sec04_flex_box .work_link {
+  width: 32%;
 }
 #home.main .sec04_works .to_works_more_button {
   margin-top: 100px;
@@ -594,14 +623,50 @@
 }
 #home.main .sec05_contact {
   text-align: center;
-  overflow: hidden;
 }
-#home.main .parent {
+#home.main .sec05_contact .container {
+  -webkit-clip-path: inset(0 0 50% 0);
+          clip-path: inset(0 0 50% 0);
+  width: 100%;
+  aspect-ratio: 2/1;
+  z-index: 10;
+  position: relative;
+}
+@media screen and (max-width: 1000px) {
+  #home.main .sec05_contact .container {
+    -webkit-clip-path: inset(50% 0);
+            clip-path: inset(50% 0);
+  }
+}
+#home.main .sec05_contact .section_title_box {
+  margin-top: -375px;
+}
+@media (width < 840px) {
+  #home.main .sec05_contact .section_title_box {
+    margin-top: -300px;
+  }
+}
+@media (width < 620px) {
+  #home.main .sec05_contact .section_title_box {
+    margin-top: -250px;
+  }
+}
+@media (width < 530px) {
+  #home.main .sec05_contact .section_title_box {
+    margin-top: -200px;
+  }
+}
+@media (width < 430px) {
+  #home.main .sec05_contact .section_title_box {
+    margin-top: -150px;
+  }
+}
+#home.main .sec05_contact .parent {
   margin-top: 70px;
   position: relative;
   display: inline-block;
 }
-#home.main .parent::before {
+#home.main .sec05_contact .parent::before {
   position: absolute;
   left: -2em;
   top: 0;
@@ -612,7 +677,7 @@
   border-radius: 3px;
   transform: rotate(-30deg);
 }
-#home.main .parent::after {
+#home.main .sec05_contact .parent::after {
   position: absolute;
   right: -2em;
   top: 0;
@@ -623,11 +688,11 @@
   border-radius: 3px;
   transform: rotate(30deg);
 }
-#home.main .to_contact_button {
+#home.main .sec05_contact .to_contact_button {
   margin-top: 20px;
 }
 @media (width < 768px) {
-  #home.main .to_contact_button {
+  #home.main .sec05_contact .to_contact_button {
     width: 80%;
   }
 }
@@ -1176,13 +1241,51 @@
   margin: 20px auto 95px;
 }
 
-#works {
-  /* https://blog.raizzenet.com/mouse-hover-caption-effects-in-css/#i-sample2 */
+#works .sec01_about .container {
+  -webkit-clip-path: inset(0 0 50% 0);
+          clip-path: inset(0 0 50% 0);
+  width: 100%;
+  aspect-ratio: 2/1;
+  z-index: 10;
+  position: relative;
+}
+@media screen and (max-width: 1000px) {
+  #works .sec01_about .container {
+    -webkit-clip-path: inset(50% 0);
+            clip-path: inset(50% 0);
+  }
+}
+#works .sec01_about .section_title_box {
+  text-align: center;
+  margin-top: -375px;
+}
+@media (width < 840px) {
+  #works .sec01_about .section_title_box {
+    margin-top: -300px;
+  }
+}
+@media (width < 620px) {
+  #works .sec01_about .section_title_box {
+    margin-top: -250px;
+  }
+}
+@media (width < 530px) {
+  #works .sec01_about .section_title_box {
+    margin-top: -200px;
+  }
+}
+@media (width < 430px) {
+  #works .sec01_about .section_title_box {
+    margin-top: -150px;
+  }
+}
+#works .sec01_about .section_subtitle_box {
+  text-align: center;
 }
 #works .sec02_works_links {
   margin-top: 70px;
 }
-#works .works_links_wrapper {
+#works .sec02_works_links .works_links_wrapper {
   width: 90%;
   margin: 0 auto 80px;
   display: flex;
@@ -1190,18 +1293,19 @@
   justify-content: space-around;
   align-items: center;
   gap: 20px;
+  /* https://blog.raizzenet.com/mouse-hover-caption-effects-in-css/#i-sample2 */
 }
-#works .works_link {
+#works .sec02_works_links .works_links_wrapper .works_link {
   display: block;
   position: relative;
   border-radius: 20px;
   width: 300px;
 }
-#works .link_img {
+#works .sec02_works_links .works_links_wrapper .works_link .link_img {
   display: block;
   width: 100%;
 }
-#works .mask {
+#works .sec02_works_links .works_links_wrapper .mask {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -1217,11 +1321,11 @@
   transition: all 0.6s ease;
   text-align: center;
 }
-#works .works_link:hover .mask {
+#works .sec02_works_links .works_links_wrapper .works_link:hover .mask {
   opacity: 0.9; /* マスクを表示する */
   padding-top: 10px; /* ホバーで下にずらす */
 }
-#works .caption {
+#works .sec02_works_links .works_links_wrapper .works_link:hover .mask .caption {
   font-size: 130%;
 }
 #works .to_contact_button {
