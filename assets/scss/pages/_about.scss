@@ -87,7 +87,7 @@
                 left: 19%;
             }
             @media (width < 700px){
-                width: 80%;
+                width: 100%;
                 padding-left: 80px;
             }
             @media (width < 500px){
@@ -105,7 +105,7 @@
             z-index: 2;
             width: 630px;
             background-color: #FCFDD880;
-            padding: 28px 10%  9% 5%;
+            padding: 50px 25% 5% 5%;
             border-radius: 38% 62% 27% 41% / 30% 25% 63% 64%;
             @media (width < 1197px){
                 left: 10%;
@@ -114,7 +114,7 @@
              @media (width < 900px){
                 left: 1%;
                 width: 460px;
-                padding-left: 7%;
+                padding: 7%;
              }
              @media (width < 800px){
                 left: 15%;

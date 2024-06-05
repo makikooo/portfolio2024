@@ -66,10 +66,8 @@
             border-spacing: 65px;
             border-collapse: separate;
             font-size: 18px;
-            @media (width < 1000px) {
-                .contact_table{
-                    width: 90%;
-                }
+            @include mq(lg) {
+                width: 96%;
             }
             & tbody {
                 .contact_tr {

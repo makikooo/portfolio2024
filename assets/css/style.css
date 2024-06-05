@@ -5,11 +5,11 @@
   width: 100vw;
   height: 100vh;
 }
-.mv .mv img {
+.mv img {
   width: 150px;
 }
-@media (width < 660px) {
-  .mv .mv img {
+@media screen and (max-width: 768px) {
+  .mv img {
     width: 100px;
   }
 }
@@ -50,11 +50,21 @@
   left: 0%;
   animation: mv_move_second 2s ease-in-out, opacity 2s ease-in-out;
 }
+@media screen and (max-width: 768px) {
+  .mv .mv3 {
+    display: none;
+  }
+}
 .mv .mv4 {
   position: absolute;
   top: 35%;
   right: 0%;
   animation: mv_move_second 2s ease-in-out, opacity 2s ease-in-out;
+}
+@media screen and (max-width: 768px) {
+  .mv .mv4 {
+    display: none;
+  }
 }
 @keyframes mv_move_second {
   0% {
@@ -490,7 +500,7 @@
   flex-shrink: 0;
   display: flex;
   align-items: center;
-  width: vh(1200);
+  width: 110vw;
   height: 100%;
   background-color: #F0FFF8;
 }
@@ -502,7 +512,7 @@
 #home.main .side-scroll .inner {
   width: 100%;
   height: 80%;
-  padding: vw(100) vh(100);
+  padding: 60px;
 }
 @media screen and (min-height: 700px) {
   #home.main .side-scroll .inner {
@@ -600,14 +610,25 @@
   left: 50%;
   transform: translateX(-50%);
 }
+@media screen and (max-width: 768px) {
+  #home.main .sec04_works .section_subtitle_box {
+    top: 290px;
+  }
+}
 #home.main .sec04_works .sec04_flex_box {
   z-index: 999999;
   width: 80%;
-  margin: -180px auto 0;
+  margin: -90px auto 0;
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
   align-items: center;
+  justify-content: center;
+}
+@media screen and (max-width: 768px) {
+  #home.main .sec04_works .sec04_flex_box {
+    margin-top: 0;
+  }
 }
 #home.main .sec04_works .sec04_flex_box .work_link {
   width: 32%;
@@ -817,7 +838,7 @@
 }
 @media (width < 700px) {
   #about .sec02_about_me .about_me_text {
-    width: 80%;
+    width: 100%;
     padding-left: 80px;
   }
 }
@@ -837,7 +858,7 @@
   z-index: 2;
   width: 630px;
   background-color: rgba(252, 253, 216, 0.5019607843);
-  padding: 28px 10% 9% 5%;
+  padding: 50px 25% 5% 5%;
   border-radius: 38% 62% 27% 41%/30% 25% 63% 64%;
 }
 @media (width < 1197px) {
@@ -850,7 +871,7 @@
   #about .sec02_about_me .career {
     left: 1%;
     width: 460px;
-    padding-left: 7%;
+    padding: 7%;
   }
 }
 @media (width < 800px) {
@@ -1212,9 +1233,9 @@
   border-collapse: separate;
   font-size: 18px;
 }
-@media (width < 1000px) {
-  #contact .sec03_contact .contact_table .contact_table {
-    width: 90%;
+@media screen and (max-width: 1000px) {
+  #contact .sec03_contact .contact_table {
+    width: 96%;
   }
 }
 @media (width < 500px) {

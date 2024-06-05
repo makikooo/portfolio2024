@@ -304,9 +304,11 @@ body {
 
 .sns_wrapper {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   flex-wrap: wrap;
+  margin: 0 auto;
+  width: 90%;
   gap: 30px;
   z-index: 9990;
   position: relative;
@@ -352,7 +354,7 @@ body {
 
 .to_design {
   position: absolute;
-  top: 39%;
+  top: 45%;
   left: 49%;
   width: 112px;
   transform: translate(-50%);
@@ -360,7 +362,7 @@ body {
 @media (width < 768px) {
   .to_design {
     font-size: 14px;
-    top: 31%;
+    top: 45%;
   }
 }
 
