@@ -364,7 +364,7 @@ https://design-library.jp/lab/arrow-right
     left: 11%;
     transform: translateX(-50%);
     @media (width < 768px){
-        left: 20%;
+        left: 16%;
     }
   }
   
@@ -422,7 +422,7 @@ https://design-library.jp/lab/arrow-right
             background: currentColor;
             top: 26%;
             @include mq(md){
-                top: 10%;
+                top: -2%;
             }
             &::before {
                 content: '';
