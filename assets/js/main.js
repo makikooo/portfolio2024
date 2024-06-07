@@ -386,17 +386,17 @@ let option11 = {
 };
 
 
-RotateCircularTextAnimation(option);
-RotateCircularTextAnimation(option2);
-RotateCircularTextAnimation(option3);
-RotateCircularTextAnimation(option4);
+// RotateCircularTextAnimation(option);
+// RotateCircularTextAnimation(option2);
+// RotateCircularTextAnimation(option3);
+// RotateCircularTextAnimation(option4);
 RotateCircularTextAnimation(option5);
 RotateCircularTextAnimation(option6);
 RotateCircularTextAnimation(option7);
 RotateCircularTextAnimation(option8);
-RotateCircularTextAnimation(option9);
-RotateCircularTextAnimation(option10);
-RotateCircularTextAnimation(option11);
+// RotateCircularTextAnimation(option9);
+// RotateCircularTextAnimation(option10);
+// RotateCircularTextAnimation(option11);
 
 
 

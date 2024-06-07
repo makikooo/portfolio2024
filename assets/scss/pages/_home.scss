@@ -178,7 +178,8 @@
                 z-index: 10;
                 position: relative;
                 @include mq(lg) {
-                    clip-path: inset(50% 0);
+                    // clip-path: inset(50% 0);
+                    display: none;
                 }
             }
             & .section_title_box {
@@ -367,8 +368,12 @@
                 aspect-ratio: 2 / 1;
                 z-index: 10;
                 position: relative;
+                // display: flex; /* 子要素を横並びにする */
+                // overflow-x: auto; /* 横スクロールを有効にする */
+                // white-space: nowrap; /* 子要素を改行させない */
                 @include mq(lg) {
-                    clip-path: inset(50% 0);
+                    // clip-path: inset(50% 0);
+                    display: none;
                 }
             }
             .section_title_box {
@@ -493,10 +498,6 @@
                 }
             }
         }
-            
-            
-        // ここから注意して作業すること
-        
         
         /* sec04_works */
         .sec04_works {
@@ -511,7 +512,9 @@
                 z-index: 10;
                 position: relative;
                 @include mq(lg) {
-                    clip-path: inset(50% 0);
+                    // clip-path: inset(50% 0);
+                    display: none;
+                    
                 }
             }
             & .section_title_box {
@@ -565,7 +568,8 @@
                 z-index: 10;
                 position: relative;
                 @include mq(lg) {
-                    clip-path: inset(50% 0);
+                    // clip-path: inset(50% 0);
+                    display: none;
                 }
             }
             .section_title_box {
@@ -619,6 +623,3 @@
         }
     }
 }
-
-
-
