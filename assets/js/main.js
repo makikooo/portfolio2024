@@ -40,7 +40,7 @@ const RotateCircularTextAnimation = (option) => {
   // default option
   let default_option = {
     target_element: '', // taget HTML element ('#id' '.class' etc)
-    diameter: 1000, // diameter of a circle (min 1 max 10)
+    diameter: 768, // diameter of a circle (min 1 max 10)
     position_top: 10, // circular position y (%)
     position_left: 50, // circular position x (%)
     font_size: 40, // font size (px)
@@ -60,8 +60,7 @@ const RotateCircularTextAnimation = (option) => {
 
   // whether the target element exists
   if (!document.querySelector(op.target_element)) {
-    console.log('no target element.');
-    return;
+        return;
   }
 
 
@@ -243,7 +242,7 @@ let option2 = {
 let option3 = {
   target_element: '#circular-text3', // taget HTML element ('#id' '.class' etc)
   diameter: 900, // diameter of a circle (min 1 max 10)
-  position_top: 80, // circular position y (%)
+  position_top: 90, // circular position y (%)
   position_left: 50, // circular position x (%)
   font_size: 40, // font size (px)
   last_space: true, // Add a space after the last character. (true or false)
@@ -259,7 +258,7 @@ let option3 = {
 let option4 = {
   target_element: '#circular-text4', // taget HTML element ('#id' '.class' etc)
   diameter: 900, // diameter of a circle (min 1 max 10)
-  position_top: 80, // circular position y (%)
+  position_top: 90, // circular position y (%)
   position_left: 50, // circular position x (%)
   font_size: 40, // font size (px)
   last_space: true, // Add a space after the last character. (true or false)
@@ -386,17 +385,32 @@ let option11 = {
 };
 
 
-// RotateCircularTextAnimation(option);
-// RotateCircularTextAnimation(option2);
-// RotateCircularTextAnimation(option3);
-// RotateCircularTextAnimation(option4);
+// レスポンシブ
+const matchMedia = window.matchMedia('(max-width:1000px)');
+
+if (matchMedia.matches) {
+  // 999px以下で行う処理
+  
+} else {
+    // 1000px以上で行う処理
+    RotateCircularTextAnimation(option);
+    RotateCircularTextAnimation(option2);
+    RotateCircularTextAnimation(option3);
+    RotateCircularTextAnimation(option4);
+    RotateCircularTextAnimation(option9);
+    RotateCircularTextAnimation(option10);
+    RotateCircularTextAnimation(option11);
+
+}
+
+
+
+
 RotateCircularTextAnimation(option5);
 RotateCircularTextAnimation(option6);
 RotateCircularTextAnimation(option7);
 RotateCircularTextAnimation(option8);
-// RotateCircularTextAnimation(option9);
-// RotateCircularTextAnimation(option10);
-// RotateCircularTextAnimation(option11);
+
 
 
 

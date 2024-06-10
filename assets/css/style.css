@@ -215,24 +215,9 @@
 #home.main .sec01_about .section_title_box {
   margin-top: -400px;
 }
-@media (width < 840px) {
+@media (width <= 1000px) {
   #home.main .sec01_about .section_title_box {
-    margin-top: -300px;
-  }
-}
-@media (width < 620px) {
-  #home.main .sec01_about .section_title_box {
-    margin-top: -250px;
-  }
-}
-@media (width < 530px) {
-  #home.main .sec01_about .section_title_box {
-    margin-top: -200px;
-  }
-}
-@media screen and (max-width: 480px) {
-  #home.main .sec01_about .section_title_box {
-    margin-top: -20px;
+    margin-top: 0;
   }
 }
 #home.main .sec01_about .about_wrapper {
@@ -459,24 +444,9 @@
 #home.main .sec02_can .section_title_box {
   margin-top: -375px;
 }
-@media (width < 840px) {
+@media (width <= 1000px) {
   #home.main .sec02_can .section_title_box {
-    margin-top: -300px;
-  }
-}
-@media (width < 620px) {
-  #home.main .sec02_can .section_title_box {
-    margin-top: -250px;
-  }
-}
-@media (width < 530px) {
-  #home.main .sec02_can .section_title_box {
-    margin-top: -200px;
-  }
-}
-@media (width < 430px) {
-  #home.main .sec02_can .section_title_box {
-    margin-top: -10px;
+    margin-top: 150px;
   }
 }
 #home.main .sec02_can .section_title_box .section_title {
@@ -657,7 +627,12 @@
   }
 }
 #home.main .sec04_works .section_title_box {
-  margin-top: 20px;
+  margin-top: -375px;
+}
+@media (width <= 1000px) {
+  #home.main .sec04_works .section_title_box {
+    margin-top: 150px;
+  }
 }
 #home.main .sec04_works .section_subtitle_box {
   margin-bottom: 50px;
@@ -670,7 +645,7 @@
 #home.main .sec04_works .sec04_flex_box {
   z-index: 999999;
   width: 80%;
-  margin: -90px auto 0;
+  margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
@@ -718,24 +693,9 @@
 #home.main .sec05_contact .section_title_box {
   margin-top: -375px;
 }
-@media (width < 840px) {
+@media (width < 1000px) {
   #home.main .sec05_contact .section_title_box {
-    margin-top: -300px;
-  }
-}
-@media (width < 620px) {
-  #home.main .sec05_contact .section_title_box {
-    margin-top: -250px;
-  }
-}
-@media (width < 530px) {
-  #home.main .sec05_contact .section_title_box {
-    margin-top: -200px;
-  }
-}
-@media (width < 430px) {
-  #home.main .sec05_contact .section_title_box {
-    margin-top: -20px;
+    margin-top: 60px;
   }
 }
 #home.main .sec05_contact .parent {
