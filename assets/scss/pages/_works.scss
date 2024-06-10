@@ -40,7 +40,7 @@
             margin: 0 auto 80px;
             display: flex;
             flex-wrap: wrap;
-            // justify-content: space-around;
+            justify-content: space-around;
             align-items: center;
             gap: 40px 20px;
             .work_link_box {
@@ -57,6 +57,7 @@
                     .link_img {
                         display: block;
                         width: 100%;
+                        border-radius: 20px;
                     }
                     /* https://blog.raizzenet.com/mouse-hover-caption-effects-in-css/#i-sample2 */
                     .mask {
@@ -76,7 +77,7 @@
                         transition:	all 0.6s ease;
                     }
                 }
-                .works_link:hover .mask {
+                &:hover .mask {
                     opacity: 0.9;	/* マスクを表示する */
                     padding-top: 10px;	/* ホバーで下にずらす */
                     .caption {

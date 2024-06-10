@@ -1,0 +1,14 @@
+@use "../globals/index" as *;
+
+#error404 {
+    .sec01_title{
+        text-align: center;
+    }
+    .sec02_text {
+        width: 42%;
+        margin: 30px auto;
+        p {
+            text-align: left;
+        }
+    }
+}
