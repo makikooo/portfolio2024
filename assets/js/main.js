@@ -386,6 +386,7 @@ let option11 = {
 
 
 // レスポンシブ
+// https://qiita.com/flat-ito/items/44d6526a720201aecca4
 const matchMedia = window.matchMedia('(max-width:1000px)');
 
 if (matchMedia.matches) {
