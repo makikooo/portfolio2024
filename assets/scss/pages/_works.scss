@@ -12,6 +12,9 @@
             @include mq(lg) {
                 clip-path: inset(50% 0);
             }
+            @include mq(md) {
+                display: none;
+            }
         }
         .section_title_box {
             text-align: center;
@@ -19,14 +22,8 @@
             @media (width < 840px){
                 margin-top: -300px;
             }
-            @media (width < 620px){
-                margin-top: -250px;
-            }
-            @media (width < 530px){
-                margin-top: -200px;
-            }
-            @media (width < 430px){
-                margin-top: -150px;
+            @include mq(md) {
+                margin-top: 0;
             }
         }
         .section_subtitle_box {
