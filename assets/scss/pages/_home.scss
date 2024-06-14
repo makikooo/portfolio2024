@@ -219,6 +219,9 @@
                         width: 85%;
                         margin-top: 30px;
                     }
+                    @media (width < 420px){
+                        width: 100%;
+                    }
                     & .catch_phrase {
                         width: 420px;
                         height: 592px;
@@ -265,34 +268,41 @@
                     top: 234px;
                     left: 40%;
                     width: 725px;
-                    height: 450px;
-                    border-radius: 63% 37% 72% 28% / 51% 59% 41% 49%;
+                    height: 420px;
+                    border-radius: 38% 37% 72% 36%/51% 59% 41% 45%;
                     background-color: #CCEAC7;
                     @include mq(xl){
-                        width: 60%;
+                        width: 52%;
                     }
                     @include mq(lg){
                         left: 30%;
-                        width: 50%;
+                        width: 57%;
                         height: 460px;
                     }
                     @media (width < 838px){
                         left: 30%;
-                        width: 70%;
+                        width: 64%;
                     }
                     @include mq(md){
                         top: 170px;
+                        height: 520px;
                     }
                     @media (width < 640px){
-                        left: 10%;
+                        left: 7%;
+                        width: 83%;
                     }
-                    @media (width < 528px){
+                    @media (width < 539px){
                         width: 90%;
                         left: 3%;
+                        height: 510px;
+
+                    }
+                    @media (width < 529px){
+                        height: 540px;
                     }
                     @include mq(sm){
-                        height: 480px;
-                        width: 100%;
+                        border-radius: 38% 50% 72% 36% / 51% 59% 22% 45%;
+                        height: 550px;
                     }
                     .about_me {
                         position: absolute;
@@ -306,6 +316,12 @@
                         @media (width < 838px){
                             left: 20%;
                             top: 100px;
+                        }
+                        @media (width < 640px){
+                            left: 13%;
+                        }
+                        @media (width < 538px) {
+                                width: 63%;
                         }
                         .name {
                             font-size: 24px;
@@ -323,13 +339,16 @@
                             @media (width < 528px){
                                 width: 110%;
                             }
+                            @media (width < 392px) {
+                                width: 115%;
+                            }
                         }
                     }
                 }
                 .about_me_img_wrapper {
                     position: absolute;
                     top: 235px;
-                    left: 29%;
+                    left: 26%;
                     width: 325px;
                     height: 355px;
                     border-radius: 39% 61% 52% 48% / 40% 45% 55% 60% ;
@@ -337,11 +356,14 @@
                     background-position: 50% 13%;
                     background-size: 110%;
                     @media (width < 1625px){
-                        left: 18%;
+                        left: 22%;
                     }
                     @include mq(lg){
                         width: 200px;
                         height: 220px;
+                    }
+                    @media (width < 910px) {
+                        left: 15%;
                     }
                     @include mq(md){
                         left: 14%;
@@ -351,11 +373,9 @@
                         left: 10%;
                     }
                     @media (width < 640px){
-                        left: 65%;
-                    }
-                    @media (width < 566px){
                         width: 150px;
                         height: 150px;
+                        left: 54%;
                     }
                 }
             }
@@ -409,100 +429,49 @@
         /* 共通 */
         /* https://qiita.com/k_watanabe_51/items/0d21d6560c10163a130f */
         /* 横スクロールセクション */
-        .side-scroll {  
-            .wrapper {
-                overflow: hidden;
-                position: relative;
+        .l-hero {
+            overflow: hidden;
+            position: relative;
+            .l-hero-wrapper {
+                width: 400%;
                 height: 100vh;
-            }
-            
-            .container {
-                position: absolute;
-                top: 0;
-                left: 0;
                 display: flex;
-                align-items: center;
-                height: 100%;
+                flex-wrap: nowrap;
+                will-change: auto;
             }
-            
-            .section {
-                flex-shrink: 0;
-                display: flex;
-                align-items: center;
-                width: 110vw;
-                height: 100%;
-                background-color: $bg-color;
-                @media screen and (min-height: 700px) {
-                    width: 1200px;
-                }
-            }
-            
-            .inner {
+            .l-hero-panel {
                 width: 100%;
-                height: 80%;
-                padding: 60px;
-                @media screen and (min-height: 700px) {
-                    padding: 100px;
-                }
+                height: 100%;
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: center;
+                background-color: $bg-color;
                 .side-scroll_item01 {
-                    width: 80%;
-                    height: 100%;
-                    // border-radius: 30% 70% 51% 49% / 43% 30% 70% 57%;
                     background-color: #F5E1E1;
-                    @include mq(md) {
-                        width: 100%;
-                    }
                 }
                 .side-scroll_item02 {
-                    width: 100%;
-                    height: 100%;
-                    // border-radius: 51% 49% 51% 49% / 37% 67% 33% 63%;
                     background-color: #FCFDD8;
-                    @include mq(md) {
-                        width: 120%;
-                    }
                 }
                 .side-scroll_item03 {
-                    width: 90%;
-                    height: 100%;
-                    // border-radius: 51% 49% 68% 32% / 48% 43% 57% 52%;
                     background-color: #CCEAC7;
-                    @include mq(md) {
-                        width: 100%;
-                    }
                 }
                 .side-scroll_item04 {
-                    width: 100%;
-                    height: 100%;
-                    // border-radius: 30% 70% 51% 49% / 43% 30% 70% 57%;
                     background-color: #E3DFF6;
-                    @include mq(md) {
-                        width: 120%;
-                    }
                 }
                 .side-scroll_item05 {
-                    width: 90%;
-                    height: 100%;
-                    // border-radius: 27% 73% 49% 51% / 48% 30% 70% 52%;
                     background-color: #F8CFCF;
-                    @include mq(md) {
-                        width: 120%;
-                    }
                 }
-                .item_box {
+                & .item_box {
                     display: flex;
-                    justify-content: space-between;
+                    justify-content: center;
                     align-items: center;
-                    gap: 30px;
+                    width: 70%;
+                    margin: 0 auto;
                     padding: 10%;
                     border-radius: 30px;
-                    @include mq(md) {
+                    @include mq(md){
                         flex-direction: column;
-                        justify-content: center;
-                        padding: 5%;
-                        border-radius: 30px;
-                        gap: 15px;
-                        height: 450px;
                     }
                     .item_left {
                         width: 47%;
@@ -599,11 +568,57 @@
                     margin-top: 0;
                     gap: 10px;
                 }
-                .work_link {
+                .work_link_box {
                     width: 30%;
                     @include mq(md) {
+                        width: 38%;
+                    }
+                    @include mq (sm){
                         width: 100%;
                     }
+                    .work_link {
+                        display: block;
+                        position: relative;
+                        @include mq(md) {
+                            width: 100%;
+                        }
+                    
+                        .work_img {
+                            border-radius: 20px;
+                            width: 100%;
+                        }
+                         /* https://blog.raizzenet.com/mouse-hover-caption-effects-in-css/#i-sample2 */
+                        .mask {
+                            position: absolute;
+                            width: 100%;
+                            height: 100%;
+                            top:  0;
+                            left: 0;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: space-between;
+                            align-items: center;
+                            opacity: 0;	/* マスクを表示しない */
+                            background:	linear-gradient(#FCFDD8, #E8B3B3);
+                            border-radius: 20px;
+                            -webkit-transition:	all 0.6s ease;
+                            transition:	all 0.6s ease;
+                            .hover_left {
+                                h3 {
+                                    font-size: 16px;
+                                }
+                                .caption {
+                                    font-size: 14px;
+                                }
+                            }
+                       
+                        }
+                        &:hover .mask {
+                            opacity: 0.9;	/* マスクを表示する */
+                            padding-top: 10px;	/* ホバーで下にずらす */
+                        }
+                    }
+
                 }
             }
             .to_works_more_button {

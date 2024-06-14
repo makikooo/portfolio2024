@@ -13,53 +13,61 @@
             @include mq(lg) {
                 clip-path: inset(50% 0);
             }
+            @include mq(md) {
+                display: none;
+            }
         }
         .section_title_box {
             margin-top: -375px;
             @media (width < 840px){
                 margin-top: -300px;
             }
-            @media (width < 620px){
-                margin-top: -250px;
-            }
-            @media (width < 530px){
-                margin-top: -200px;
-            }
-            @media (width < 430px){
-                margin-top: -150px;
+            @include mq(md) {
+                margin-top: 0;
             }
         }
     }
     .sec02_about_me {
         position: relative;
         margin-top: 40px;
+        @media (width < 545px) {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            width: 80%;
+            margin: 20px auto;
+            align-items: center;
+        }
         & img {
             position: absolute;
             top: 0;
-            left: 23%;
+            left: 27%;
             z-index: 5;
             width: 350px;
+            @media (width < 1620px) {
+                left: 24%;
+            }
+            @media (width < 1390px) {
+                left: 17%;
+            }
             @media (width < 1095px){
-            left: 18%;
+                left: 18%;
+            }
+            @media (width < 1120px){
+                left: 16%;
+                width: 320px;
+                top: 32px;
             }
             @media (width < 900px){
-            width: 250px;
-            top: 19%;
+                width: 250px;
+                top: 37%;
             }
             @media (width < 800px){
-            width: 250px;
-            top: 13%;
-            left: 10%;
+                top: 11%;
+                left: 8%;
             }
-            @media (width < 500px){
-            width: 230px;
-            top: 45%;
-            }
-            @media (width < 435px){
-            top: 10%;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 150px;
+            @media (width < 545px){
+                position: static;
             }
         }
         .about_me_text {
@@ -72,67 +80,106 @@
             border-radius: 38% 62% 69% 31% / 30% 46% 54% 70%;
             width: 580px;
             padding: 100px;
+            @media (width < 1920px) {
+                width: 600px;
+                padding: 83px 80px 80px 125px;
+            }
             @media (width < 1455px){
                left: 46%;
                width: 600px;
             }
+            @media (width < 1390px){
+                left: 40%;
+            }
             @media (width < 900px){
-                left: 37%;
+                left: 36%;
             }
             @media (width < 800px){
-                padding-bottom: 40px;
-                padding-top: 40px;
-                padding-left: 110px;
-                top: 230px;
-                left: 19%;
+                padding-bottom: 55px;
+                padding-top: 61px;
+                padding-left: 126px;
+                top: 156px;
+                left: 25%;
             }
             @media (width < 700px){
-                width: 100%;
+                width: 92%;
                 padding-left: 80px;
+                top: 191px;
+                left: 2%;
             }
-            @media (width < 500px){
-                top: 190px;
-                left: 50%;
-                transform: translateX(-50%);
-                border-radius: 20%;
-                padding: 30px;
+            @media (width < 545px){
+                position: static;
+            }
+            @media (width < 490px) {
+                border-radius: 25px;
+                padding: 7%;
+                width: 100%;
             }
         }
         .career {
             position: absolute;
-            top: 300px;
-            left: 13%;
+            top: 288px;
+            left: 18%;
             z-index: 2;
             width: 630px;
             background-color: #FCFDD880;
-            padding: 50px 25% 5% 5%;
+            padding: 50px 6% 5% 5%;
             border-radius: 38% 62% 27% 41% / 30% 25% 63% 64%;
-            @media (width < 1197px){
+            @media (width < 1920px) {
+                padding: 50px 9% 5% 4%;
+            }
+            @media (width < 1620px){
+                padding: 50px 12% 5% 4%;
+            }
+            @media (width < 1455px) {
+                left: 17%;
+            }
+            @media (width < 1390px){
+                left: 15%;
+            }
+            @media (width < 1260px){
                 left: 10%;
-                top: 250px;
-             }
-             @media (width < 900px){
-                left: 1%;
+                padding: 50px 12% 5% 8%;
+            }
+            @media (width < 1130px){
+                left: 6%;
+                padding: 50px 14% 5% 7%;
+            }
+            @media (width < 1030px) {
+                left: 3%;
+            }
+            @media (width < 980px) {
+                padding: 50px 18% 5% 7%;
+            }
+             @media (width < 927px){
+                left: 2%;
                 width: 460px;
                 padding: 7%;
              }
+             @media (width < 900px) {
+                top: 253px;
+                padding-right: 14%;
+             }
              @media (width < 800px){
-                left: 15%;
-                top: 490px;
+                left: 8%;
+                top: 453px;
                 width: 85%;
                 padding-bottom: 80px;
                 padding-left: 80px;
              }
-             @media (width < 500px){
-                top: 500px;
-                left: 50%;
-                transform: translateX(-50%);
-                border-radius: 20%;
-                padding: 30px;
-                width: 80%;
-             }
+             @media (width < 545px){
+                position: static;
+            }
+            @media (width < 490px) {
+                border-radius: 25px;
+                padding: 7%;
+                width: 100%;
+            }
              .about_title {
                 font-size: 24px;
+                @include mq(md) {
+                    font-size: 20px;
+                }
             }
             .about_text {
                 font-size: 16px;
@@ -140,57 +187,85 @@
         }
         .tool {
             position: absolute;
-            top: 305px;
-            left: 55%;
+            top: 335px;
+            left: 45%;
             z-index: 3;
             background: #F8CFCF;
             width: 550px;
             border-radius: 53% 47% 50% 50% / 45% 54% 46% 55% ;
             padding: 80px;
+            @media(width < 1620px){
+                left: 50%;
+            }
+            @media (width < 1390px){
+                left: 53%;
+            }
+            @media (width < 1120px) {
+                padding: 65px 30px 65px 65px;
+                width: 520px;
+            }
+            @media (width < 927px) {
+                left: 48%;
+            }
             @media (width < 900px){
                 left: 47%;
                 padding-bottom: 60px;
-                padding-left: 40px;
-                padding-top: 40px;
+                padding-left: 48px;
+                padding-top: 49px;
+                padding-right: 80px;
              }
              @media (width < 800px){
-                left: 15%;
-                top: 690px;
+                left: 29%;
+                top: 623px;
                 padding: 60px;
              }
              @media (width < 700px){
                 width: 80%;
                 padding-left: 80px;
-                top: 730px;
+                left: 6%;
+                top: 679px;
              }
-             @media (width < 500px){
-                top: 790px;
-                left: 50%;
-                transform: translateX(-50%);
-                border-radius: 15%;
-                padding: 30px;
-                width: 80%;
-             }
+             @media (width < 545px){
+                position: static;
+            }
+            @media (width < 490px) {
+                border-radius: 25px;
+                padding: 7%;
+                width: 100%;
+            }
         }
         .contact_tool {
             position: relative;
-            top: 511px;
+            top: 517px;
             left: 34%;
             z-index: 1;
             background: #CCEAC7;
             width: 500px;
             padding: 60px;
             border-radius: 56% 44% 50% 50% / 61% 65% 35% 39%;
-            @media (width < 1197px){
-                top: 470px;
+            @media(width < 1920px) {
+                top: 527px;
+            }
+            @media (width < 1260px) {
+                top: 510px;
+                left: 27%;
+            }
+            @media (width < 1120px) {
+                top: 480px;
+                width: 500px;
+                left: 30%;
+            }
+            @media (width < 927px) {
+                top: 518px;
             }
             @media (width < 900px){
-                left: 30%;
+                left: 23%;
+                top: 495px;
                 padding-top: 70px;
             }
             @media (width < 800px){
-                left: 20%;
-                top: 900px;
+                left: 13%;
+                top: 809px;
                 width: 450px;
                 padding-bottom: 60px;
                 padding-left: 60px;
@@ -198,26 +273,30 @@
              @media (width < 700px){
                 width: 80%;
                 padding-left: 80px;
-                top: 930px;
+                top: 857px;
+                left: 7%;
              }
-             @media (width < 500px){
-                top: 1060px;
-                left: 50%;
-                transform: translateX(-50%);
-                border-radius: 15%;
-                padding: 30px;
-                width: 80%;
-             }
+             @media (width < 545px){
+                position: static;
+            }
+            @media (width < 490px) {
+                border-radius: 25px;
+                padding: 7%;
+                width: 100%;
+            }
         }        
     }
     /* スキルテーブル */
     .sec03_skill {
         margin-top: 600px;
         @media (width < 800px){
-            margin-top: 1000px;
+            margin-top: 900px;
         }
-        @media (width < 500px){
-            margin-top: 1110px;
+        @media (width < 700px) {
+            margin-top: 920px;
+        }
+        @media (width < 545px) {
+            margin-top: 40px;
         }
         .skill_box {
             width: 836px;
@@ -245,6 +324,9 @@
                 @media (width < 1000px){
                     width: 100%;
                 }
+                @include mq(md) {
+                    border-spacing: 15px 0;
+                }
                 tbody{
                     tr {
                         height: 70px;
@@ -252,16 +334,18 @@
                             width: 17%;
                             height: 65px;
                             @media (width < 768px){
-                                display: block;
-                                width: 100%;   
+                                display: inline-block;
+                                width: 32%;
+                                height: 35px;   
                             }
                         }
                         .skill_per {
                             width: 8%;
                             height: 65px;
                             @media (width < 768px){
-                                display: block;
-                                width: 100%;   
+                                display: inline-block;
+                                width: 65%;  
+                                height: 35px; 
                             }
                         }
                         .skill_graph {
@@ -269,7 +353,8 @@
                             height: 65px;
                             @media (width < 768px){
                                 display: block;
-                                width: 100%;  
+                                width: 100%;
+                                height: 48px; 
                             }
                             .white {
                                 background-color: #fff;

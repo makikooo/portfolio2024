@@ -283,6 +283,12 @@ body {
     width: 80%;
     padding: 15px;
     font-size: 20px;
+    margin-top: 300px;
+  }
+}
+@media (width < 529px) {
+  .to_about_me_button {
+    margin-top: 320px;
   }
 }
 
