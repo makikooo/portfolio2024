@@ -57,7 +57,7 @@
     }
     .sec03_contact {
         .contact_table {
-            width: 60%;
+            width: 80%;
             margin: 0 auto;
             text-align: left;
             border-spacing: 40px;
@@ -72,17 +72,17 @@
                         width: 100%;
                     }
                     .contact_th {
-                        width: 15%;
+                        width: 20%;
                         font-weight: normal;
-                        @media (width < 768px) {
+                        @media (width < 852px) {
                             display: block;
                             width: 100%;
                         }
                     }
                     .contact_td {
-                        width: 80%;
+                        width: 75%;
                         height: 70px;
-                        @media (width < 768px) {
+                        @media (width < 852px) {
                             display: block;
                             width: 100%;
                         }

@@ -140,6 +140,8 @@
   font-size: 0.7rem;
   letter-spacing: 0.08rem;
   font-family: "Montserrat", sans-serif;
+  -ms-writing-mode: tb-rl;
+  -webkit-writing-mode: vertical-rl;
   writing-mode: vertical-rl;
 }
 .scrolldown:before {
@@ -199,8 +201,7 @@
   text-align: center;
 }
 #home.main .sec01_about .container {
-  -webkit-clip-path: inset(0 0 50% 0);
-          clip-path: inset(0 0 50% 0);
+  clip-path: inset(0 0 50% 0);
   width: 100%;
   aspect-ratio: 2/1;
   z-index: 10;
@@ -463,8 +464,7 @@
   overflow: hidden;
 }
 #home.main .sec02_can .container {
-  -webkit-clip-path: inset(0 0 50% 0);
-          clip-path: inset(0 0 50% 0);
+  clip-path: inset(0 0 50% 0);
   width: 100%;
   aspect-ratio: 2/1;
   z-index: 10;
@@ -590,8 +590,7 @@
 }
 #home.main .sec04_works .container {
   overflow: hidden;
-  -webkit-clip-path: inset(0 0 50% 0);
-          clip-path: inset(0 0 50% 0);
+  clip-path: inset(0 0 50% 0);
   width: 100%;
   aspect-ratio: 2/1;
   z-index: 10;
@@ -674,6 +673,7 @@
   opacity: 0; /* マスクを表示しない */
   background: linear-gradient(#FCFDD8, #E8B3B3);
   border-radius: 20px;
+  -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
 #home.main .sec04_works .sec04_flex_box .work_link_box .work_link:hover .mask {
@@ -708,8 +708,7 @@
   text-align: center;
 }
 #home.main .sec05_contact .container {
-  -webkit-clip-path: inset(0 0 50% 0);
-          clip-path: inset(0 0 50% 0);
+  clip-path: inset(0 0 50% 0);
   width: 100%;
   aspect-ratio: 2/1;
   z-index: 10;
@@ -772,8 +771,7 @@
   text-align: center;
 }
 #about .sec01_about .container {
-  -webkit-clip-path: inset(0 0 50% 0);
-          clip-path: inset(0 0 50% 0);
+  clip-path: inset(0 0 50% 0);
   width: 100%;
   aspect-ratio: 2/1;
   z-index: 10;
@@ -781,8 +779,7 @@
 }
 @media screen and (max-width: 1000px) {
   #about .sec01_about .container {
-    -webkit-clip-path: inset(50% 0);
-            clip-path: inset(50% 0);
+    clip-path: inset(50% 0);
   }
 }
 @media screen and (max-width: 768px) {
@@ -1337,8 +1334,7 @@
 }
 
 #contact .sec01_about .container {
-  -webkit-clip-path: inset(0 0 50% 0);
-          clip-path: inset(0 0 50% 0);
+  clip-path: inset(0 0 50% 0);
   width: 100%;
   aspect-ratio: 2/1;
   z-index: 10;
@@ -1346,8 +1342,7 @@
 }
 @media screen and (max-width: 1000px) {
   #contact .sec01_about .container {
-    -webkit-clip-path: inset(50% 0);
-            clip-path: inset(50% 0);
+    clip-path: inset(50% 0);
   }
 }
 @media screen and (max-width: 768px) {
@@ -1404,7 +1399,7 @@
   margin: 60px auto 20px;
 }
 #contact .sec03_contact .contact_table {
-  width: 60%;
+  width: 80%;
   margin: 0 auto;
   text-align: left;
   border-spacing: 40px;
@@ -1422,20 +1417,20 @@
   }
 }
 #contact .sec03_contact .contact_table tbody .contact_tr .contact_th {
-  width: 15%;
+  width: 20%;
   font-weight: normal;
 }
-@media (width < 768px) {
+@media (width < 852px) {
   #contact .sec03_contact .contact_table tbody .contact_tr .contact_th {
     display: block;
     width: 100%;
   }
 }
 #contact .sec03_contact .contact_table tbody .contact_tr .contact_td {
-  width: 80%;
+  width: 75%;
   height: 70px;
 }
-@media (width < 768px) {
+@media (width < 852px) {
   #contact .sec03_contact .contact_table tbody .contact_tr .contact_td {
     display: block;
     width: 100%;
@@ -1550,8 +1545,7 @@
 }
 
 #works .sec01_about .container {
-  -webkit-clip-path: inset(0 0 50% 0);
-          clip-path: inset(0 0 50% 0);
+  clip-path: inset(0 0 50% 0);
   width: 100%;
   aspect-ratio: 2/1;
   z-index: 10;
@@ -1559,8 +1553,7 @@
 }
 @media screen and (max-width: 1000px) {
   #works .sec01_about .container {
-    -webkit-clip-path: inset(50% 0);
-            clip-path: inset(50% 0);
+    clip-path: inset(50% 0);
   }
 }
 @media screen and (max-width: 768px) {
@@ -1613,8 +1606,7 @@
   display: block;
   width: 100%;
   height: 220px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   border-radius: 20px;
 }
 #works .sec02_works_links .works_links_wrapper .work_link_box .works_link .mask {
@@ -1630,6 +1622,7 @@
   opacity: 0; /* マスクを表示しない */
   background: linear-gradient(#FCFDD8, #E8B3B3);
   border-radius: 20px;
+  -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
 #works .sec02_works_links .works_links_wrapper .work_link_box:hover .mask {
