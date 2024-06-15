@@ -67,20 +67,32 @@
                         left: 0;
                         display: flex;
                         flex-direction: column;
-                        justify-content: space-between;
+                        justify-content: space-around;
                         align-items: center;
                         opacity: 0;	/* マスクを表示しない */
                         background:	linear-gradient(#FCFDD8, #E8B3B3);
                         border-radius: 20px;
-                        -webkit-transition:	all 0.6s ease;
-                        transition:	all 0.6s ease;
+                        -webkit-transition:	all 0.5s ease;
+                        transition:	all 0.5s ease;
                     }
                 }
                 &:hover .mask {
                     opacity: 0.9;	/* マスクを表示する */
                     padding-top: 10px;	/* ホバーで下にずらす */
-                    .caption {
-                        font-size: 130%;
+                    .mask_title {
+                        font-size: 18px;
+                        margin-top: 5px;
+                        margin-bottom: 5px;
+                        padding-bottom: 0px;
+                        border-bottom: 1.5px solid $font-color;
+                    }
+                    .mask_caption {
+                        font-size: 16px;
+                        flex-grow: 1;
+                        font-weight: 600;
+                    }
+                    .mask_subtitle {
+                        margin-bottom: 15px;
                     }
                 }
                 .go_to_page_flex {

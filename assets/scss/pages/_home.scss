@@ -352,11 +352,14 @@
                     width: 325px;
                     height: 355px;
                     border-radius: 39% 61% 52% 48% / 40% 45% 55% 60% ;
-                    background-image: url(/assets/images/karattosawayaka.webp);
+                    background-image: url(../images/karattosawayaka.webp);
                     background-position: 50% 13%;
                     background-size: 110%;
                     @media (width < 1625px){
                         left: 22%;
+                    }
+                    @media (width < 1260px) {
+                        left: 18%;
                     }
                     @include mq(lg){
                         width: 200px;
@@ -601,21 +604,28 @@
                             opacity: 0;	/* マスクを表示しない */
                             background:	linear-gradient(#FCFDD8, #E8B3B3);
                             border-radius: 20px;
-                            -webkit-transition:	all 0.6s ease;
-                            transition:	all 0.6s ease;
-                            .hover_left {
-                                h3 {
-                                    font-size: 16px;
-                                }
-                                .caption {
-                                    font-size: 14px;
-                                }
-                            }
+                            -webkit-transition:	all 0.5s ease;
+                            transition:	all 0.5s ease;
                        
                         }
                         &:hover .mask {
                             opacity: 0.9;	/* マスクを表示する */
                             padding-top: 10px;	/* ホバーで下にずらす */
+                            .mask_title {
+                                font-size: 18px;
+                                margin-top: 5px;
+                                margin-bottom: 5px;
+                                padding-bottom: 0px;
+                                border-bottom: 1.5px solid $font-color;
+                            }
+                            .mask_caption {
+                                font-size: 16px;
+                                flex-grow: 1;
+                                font-weight: 600;
+                            }
+                            .mask_subtitle {
+                                margin-bottom: 15px;
+                            }
                         }
                     }
 
