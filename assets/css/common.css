@@ -207,7 +207,8 @@ body {
   margin: 0;
   padding-bottom: 10px;
   border-bottom: solid 1px;
-  border-image: linear-gradient(90deg, #E8B3B3, #E5E6B0, #ADE2C5, #A8AADE) 1;
+  -o-border-image: linear-gradient(90deg, #E8B3B3, #E5E6B0, #ADE2C5, #A8AADE) 1;
+     border-image: linear-gradient(90deg, #E8B3B3, #E5E6B0, #ADE2C5, #A8AADE) 1;
   font-size: 32px;
   font-weight: bold;
   font-family: "Montserrat", sans-serif;
@@ -331,15 +332,16 @@ body {
 @media (width < 768px) {
   .figma_wrapper,
   .github_wrapper {
-    width: 130px;
-    height: 130px;
+    width: 120px;
+    height: 120px;
   }
 }
 
 @media (width < 768px) {
   .figma_wrapper p:nth-child(1),
   .github_wrapper p:nth-child(1) {
-    clip-path: inset(50% 0);
+    -webkit-clip-path: inset(50% 0);
+            clip-path: inset(50% 0);
   }
 }
 
