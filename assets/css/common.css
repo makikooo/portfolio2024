@@ -319,6 +319,14 @@ body {
   z-index: 9990;
   position: relative;
 }
+@media screen and (max-width: 768px) {
+  .sns_wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+    width: 70%;
+  }
+}
 
 .figma_wrapper,
 .github_wrapper {

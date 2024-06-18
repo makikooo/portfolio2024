@@ -307,7 +307,12 @@ body {
     gap: 30px;
     z-index: 9990;
     position: relative;
-    
+    @include mq(md) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        place-items: center;
+        width: 70%;
+    }
 }
 .figma_wrapper,
 .github_wrapper {
