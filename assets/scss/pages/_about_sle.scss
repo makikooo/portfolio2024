@@ -40,6 +40,9 @@
                     border-radius: 20px;
                     font-size: 18px;
                     font-weight: 700;
+                    @include mq(md) {
+                        width: 90%;
+                    }
                 }
                 & p:first-of-type {
                     margin: 0 auto 20px;

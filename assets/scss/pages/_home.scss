@@ -475,10 +475,14 @@
                     border-radius: 30px;
                     @include mq(md){
                         flex-direction: column;
+                        padding: 10% 5%;
                     }
                     .item_left {
                         width: 47%;
                         text-align: center;
+                        @include mq(md) {
+                            width: 100%;
+                        }
                         h3 {
                             font-size: 40px;
                             @include mq(md) {
@@ -488,6 +492,7 @@
                         p {
                             font-size: 32px;
                             @include mq(md) {
+                                margin-bottom: 20px;
                                 font-size: 18px;
                                 flex-grow: 1;
                             }
@@ -501,7 +506,7 @@
                         justify-content: baseline;
                         gap: 20px;
                         @include mq(md) {
-                            width: 80%;
+                            width: 100%;
                         }
                         img {
                             @include mq(md) {
@@ -512,7 +517,7 @@
                             text-align: left;
                             font-size: 16px;
                             @include mq(md) {
-                                width: 80%;
+                                width: 100%;
                             }
                         }
                     }
@@ -610,10 +615,10 @@
                         }
                         &:hover .mask {
                             opacity: 0.9;	/* マスクを表示する */
-                            padding-top: 10px;	/* ホバーで下にずらす */
+                            padding-top: 5px;	/* ホバーで下にずらす */
                             .mask_title {
                                 font-size: 18px;
-                                margin-top: 5px;
+                                margin-top: 0px;
                                 margin-bottom: 5px;
                                 padding-bottom: 0px;
                                 border-bottom: 1.5px solid $font-color;
@@ -622,6 +627,7 @@
                                 font-size: 16px;
                                 flex-grow: 1;
                                 font-weight: 600;
+                                line-height: 140%;
                             }
                             .mask_subtitle {
                                 margin-bottom: 15px;
