@@ -236,6 +236,14 @@
                         transform: translateX(-50%);
                         @include mq(md){
                             font-size: 24px;
+                            top: 47px;
+                        }
+                        @media (width < 640px) {
+                            left: 0;
+                            transform: translateX(0);
+                        }
+                        @media (width < 555px){
+                            left: -15%;
                         }
                         & .catch_phrase_dot {
                             font-size: 35.82px;
@@ -370,7 +378,7 @@
                     }
                     @include mq(md){
                         left: 14%;
-                        top: 170px;
+                        top: 115px;
                     }
                     @media (width < 670px){
                         left: 10%;

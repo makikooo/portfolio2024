@@ -43,7 +43,7 @@
             top: 0;
             left: 27%;
             z-index: 5;
-            width: 350px;
+            width: 275px;
             @media (width < 1620px) {
                 left: 24%;
             }
@@ -55,11 +55,10 @@
             }
             @media (width < 1120px){
                 left: 16%;
-                width: 320px;
                 top: 32px;
             }
             @media (width < 900px){
-                width: 250px;
+                width: 185px;
                 top: 37%;
             }
             @media (width < 800px){

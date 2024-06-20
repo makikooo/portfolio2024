@@ -266,6 +266,18 @@
 @media screen and (max-width: 768px) {
   #home.main .sec01_about .about_wrapper .catch_phrase_wrapper .catch_phrase {
     font-size: 24px;
+    top: 47px;
+  }
+}
+@media (width < 640px) {
+  #home.main .sec01_about .about_wrapper .catch_phrase_wrapper .catch_phrase {
+    left: 0;
+    transform: translateX(0);
+  }
+}
+@media (width < 555px) {
+  #home.main .sec01_about .about_wrapper .catch_phrase_wrapper .catch_phrase {
+    left: -15%;
   }
 }
 #home.main .sec01_about .about_wrapper .catch_phrase_wrapper .catch_phrase .catch_phrase_dot {
@@ -442,7 +454,7 @@
 @media screen and (max-width: 768px) {
   #home.main .sec01_about .about_wrapper .about_me_img_wrapper {
     left: 14%;
-    top: 170px;
+    top: 115px;
   }
 }
 @media (width < 670px) {
@@ -827,7 +839,7 @@
   top: 0;
   left: 27%;
   z-index: 5;
-  width: 350px;
+  width: 275px;
 }
 @media (width < 1620px) {
   #about .sec02_about_me img {
@@ -847,13 +859,12 @@
 @media (width < 1120px) {
   #about .sec02_about_me img {
     left: 16%;
-    width: 320px;
     top: 32px;
   }
 }
 @media (width < 900px) {
   #about .sec02_about_me img {
-    width: 250px;
+    width: 185px;
     top: 37%;
   }
 }
