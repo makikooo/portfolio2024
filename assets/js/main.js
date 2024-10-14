@@ -15,7 +15,7 @@ function txtSplit(txtElemAry) {
   function addCss(txtElemAry) {
     let aryNumner = 0
     const defaultTime = 0
-    const animeTime = 0.09
+    const animeTime = 0.05
     txtElemAry.forEach( item=> {
       [...item.children].forEach( item2 => {
         aryNumner++
