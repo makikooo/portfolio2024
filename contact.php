@@ -259,9 +259,7 @@
             <p>TOPへ戻る</p>
             <span class="dli-arrow-up"></span>
         </a>
-        <small>©2024  PORTFOLIO 
-            <!-- Of  Makiko Karasawa -->
-        </small>
+        <small>©2024-2025  PORTFOLIO Of  Makiko Karasawa</small>
     </footer>
     <script src="./assets/js/main.js"></script>
 
